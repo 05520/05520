@@ -1,0 +1,1062 @@
+{% extends "layout.html" %}
+
+{% block title %}Engineering Success{% endblock %}
+{% block lead %}Demonstrate engineering success in a technical aspect of your project by going through at least one
+iteration of the engineering design cycle. This achievement should be distinct from your Contribution for Bronze.{%
+endblock %}
+
+{% block page_content %}
+
+<div class="inner-banner inner-bg3 header-mask"
+	style="background: url(https://static.igem.wiki/teams/5210/photo/engineering.jpg) no-repeat center 65% fixed;width: 100%;background-size: cover;height: 94vh;">
+	<div class="container">
+		<div class="inner-title">
+			<h3>Engineering Success</h3>
+		</div>
+		<!----scroll icon------->
+		<div class="wrapper">
+			<div class="scroll-hint">
+				<p style="text-indent: unset;">Scroll To Explore</p>
+				<div class="icon-scroll">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<script type="text/javascript">
+	function showPlanA() {
+		var x = document.getElementById("tab-2")
+		x.setAttribute("class", "tab-pane fade ");
+
+		var x = document.getElementById("tab-1")
+		x.setAttribute("class", "tab-pane fade active show");
+
+		var x = document.getElementById("myplanB")
+		x.setAttribute("class", "nav-link ");
+
+		var x = document.getElementById("myplanA")
+		x.setAttribute("class", "nav-link active show");
+
+		var x = document.getElementById("go-to-top")
+
+		window.scrollTo(0, x.offsetTop);
+	}
+
+	function showPlanB() {
+
+		var x = document.getElementById("tab-2")
+		x.setAttribute("class", "tab-pane fade active show");
+
+		var x = document.getElementById("tab-1")
+		x.setAttribute("class", "tab-pane fade");
+
+		var x = document.getElementById("myplanB")
+		x.setAttribute("class", "nav-link active show");
+
+		var x = document.getElementById("myplanA")
+		x.setAttribute("class", "nav-link");
+
+		var x = document.getElementById("go-to-top")
+
+		window.scrollTo(0, x.offsetTop);
+	}
+
+
+</script>
+
+
+<!-- Page Content  请大家编辑以下部分 -->
+
+<div class="container relative" style="max-width: 1300px;">
+
+	<!-------这个是膜态框的内容，注意这个一定要放在boxcontainer的外面，不然会出bug-------->
+
+	<!--------模态图片 这个是通用的，所有图片共用这一个div-------->
+	<div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+		<br>
+		<div class="w3-modal-content w3-animate-zoom">
+			<img id="img01" style="width:100%">
+		</div>
+	</div>
+
+
+	<!-- Overview -->
+	<div class="boxcontainer reveal-on-scroll" style="margin-top: 2.5em;width: 100%;">
+		<h1>Overview</h1>
+		<p><img src="https://static.igem.wiki/teams/5210/engineer-cycle/engineer-cycle-1.png" alt="Gut-sweeper"
+				style="width:30vw;float: left;"></p>
+		<p>In the article " Can a biologist fix a radio? ", a reflection on the research methodology of biology is
+			presented, hinting at the close integration of biology and engineering in the field of synthetic biology.
+			The Engineering Cycle is the core framework for the development of synthetic biology projects, with
+			aniterative approach to optimising designs, validating hypotheses and improving the overall performance of
+			the project. Adhering to the above concepts, our team integrates engineering thinking into different
+			functional modules of the project, and sets up the Engineering Cycle for continuous iteration to ensure the
+			compatibility and operability between the modules. We strictly follow the phases of design, build, test, and
+			learn, and continue to improve the project solution in multiple aspects. In the design phase we clarified
+			the core objectives of the project and proposed innovative design ideas by combining literature research and
+			expert advice. In the construction stage, we sent the designed gene fragments to the company for synthesis,
+			and the synthesised plasmids were transferred to the chassis cell. We paid attention to the accuracy and
+			reproducibility of the construction, and made a detailed experimental procedure to ensure the consistency of
+			the experiment. Thus, in the testing phase, we rigorously verified whether the construction of the module
+			was feasible through experiments. And in the learning phase, we analysed the test results and identified the
+			deficiencies and room for improvement in the design. After determining whether the project should continue
+			to be refined or not, the ideas were integrated into the next cycle. We objectively viewed successes and
+			failures in each engineering cycle, optimised our project to the best of our ability, and constructed safe
+			and consistently effective light-emitting engineering bacteria.</p>
+		<p>Our light emitting module includes 5 cycles, in cycle1 and 2 we successfully verified the feasibility of the luminescence genetic circuits. Cycle3 focused on making the engineered bacteria luminescence after entering seawater. Cycle4 solved the problem of luminescence substrate and energy waste, and the engineered bacteria luminescence as much as possible in the night, and cycle5 is the strategy we proposed to further increase the luminescence intensity.</p>
+	    <p>The safety module also includes 5 cycles, in cycle1 we choose the right bacteria for the chassis. Cycle2 solved the problem of normal survival and functioning of engineered bacteria in the ocean and space environment. Cycle3 provided a good strategy for the preservation of the product. Cycle4 proposed a solution to the problem of false positives and contamination that may be caused by the leakage of engineered bacteria. Cycle5 focused on the strategy of recycling and disposal of the product after use.</p>
+	</div>
+
+	<!-- 主体内容 -->
+	<div class="tab-content111" id="go-to-top">
+		<div class="tab-pane fade active show" id="tab-1">
+			<style>
+				#page-content-wrapper strong {
+					background-color: #027efb;
+					color: #fff;
+				}
+			</style>
+			<div>
+				<!-- 目录 -->
+				<nav id="sidenav-wrapper" class="col-3 d-flex" style="height: 91%;">
+					<ul class="mcd-menu" style="height: 420px;">
+						<li
+							style="border-top-left-radius: 7px;border-top-right-radius: 7px; box-shadow: 0 6px 7px -2px rgba(0,0,0,0.5);">
+							<a href="#Lc1" class="sidenav-link nav-link">
+								<i class="fa fa-gear"></i>
+								<strong>Light Emitting Module</strong>
+
+							</a>
+							<ul style="z-index: 100000 !important;list-style: none;">
+								<li><a href="#Lc1">Cycle1: Fundamental luminescence</a></li>
+								<li><a href="#Lc2">Cycle2: Enhanced luminescence</a></li>
+								<li><a href="#Lc3">Cycle3: Osmotic receptivity</a></li>
+								<li><a href="#Lc4">Cycle4: Night selectivity</a></li>
+								<li><a href="#Lc5">Cycle5: Aggregative luminescence exploration</a></li>
+							</ul>
+						</li>
+
+						<li style="box-shadow: 0 6px 7px -2px rgba(0,0,0,0.5);">
+							<a href="#Sc1" class="sidenav-link nav-link">
+								<i class="fa fa-gear"></i>
+								<strong>Safety Module</strong>
+
+							</a>
+							<ul style="z-index: 100000 !important;list-style: none;">
+								<li><a href="#Sc1">Cycle1: Strain selection</a></li>
+								<li><a href="#Sc2">Cycle2: Microbial survival</a></li>
+								<li><a href="#Sc3">Cycle3: Product preservation</a></li>
+								<li><a href="#Sc4">Cycle4: Preventing false positives and leakage</a></li>
+								<li><a href="#Sc5">Cycle5: Product recovery</a></li>
+							</ul>
+						</li>
+						<li
+							style="border-bottom-left-radius: 7px;border-bottom-right-radius: 7px;box-shadow: 0 6px 7px -2px rgba(0,0,0,0.5);">
+							<a href="#references1" class="sidenav-link nav-link" style="border-bottom: unset;">
+								<i class="fa fa-book"></i>
+								<strong>References</strong>
+						
+							</a>
+						</li>
+						<li style="background-color: unset;">
+							<div class="tangdouren" style="text-align: center;margin-top: 10px;">
+								<a href="#" style="border-bottom: unset;"><img
+										src="https://static.igem.wiki/teams/5210/logo-astronaut-2.png" alt="糖豆人"
+										style="width: 242px;-webkit-filter: drop-shadow(4px 4px 5px rgba(0,0,0,0.5));filter: drop-shadow(4px 4px 5px rgba(0,0,0,0.5));"></a>
+							</div>
+							<div class="brother2"><img src="https://static.igem.wiki/teams/5210/logo/logo-5.png" alt=""
+									width="35%"
+									style="position:absolute;top:0px;left:40%;-webkit-filter: drop-shadow(4px 4px 5px rgba(0,0,0,0.5));filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.5));">
+							</div>
+						</li>
+					</ul>
+				</nav>
+
+				<div id="page-content-wrapper" class="col-lg-9 ms-auto">
+
+					<!-- 1. L-Cycle1 -->
+					<div id="Lc1">
+						<div class="row my-5">
+							<div class="col-lg-12 boxcontainer reveal-on-scroll" data-aos="fade-up">
+								<h1>Cycle1: Fundamental luminescence</h1>
+								<h2>1.Research:</h2>
+								<p>We summarized the luminescence mechanism of several luminescent bacteria and found
+									that almost all luminescent bacteria rely on the Lux gene cluster for
+									bioluminescence. LuxA and B encode the α and β subunits of luciferase, respectively,
+									and luxC, luxD, and luxE encode NADPH-dependent LuxC, luxD, and luxE encode
+									NADPH-dependent fatty acid reductase (54 kDa), acyltransferase (33 kDa), and ATP
+									synthase (42 kDa), which together form the fatty acid reductase complex that
+									produces long-chain aliphatic aldehydes as the electron donor for luminescence
+									reactions. While luxI and luxR upstream of luxC are bacterial Quorum sensing,
+									regulating the expression of downstream luxCDABE genes. In the natural environment,
+									the population density of luminescent bacteria needs to reach a certain threshold to
+									produce fluorescence.</p>
+
+								<h2>2.Imagine:</h2>
+								<p>We plan to engineer bacterial bioluminescence using Lux gene clusters. However, the
+									population density requirement caused by Quorum sensing regulation is not beneficial
+									to our project: ①Bacteria need to grow to a certain population density to produce
+									fluorescence, which slows down the rate of luminescence. ②It is difficult to
+									accumulate auto-inducers (AIs) in the ocean. Therefore, we decided to introduce only
+									luxCDABE luminescent gene clusters, discarding the upstream Quorum sensing
+									regulation part.</p>
+
+								<h2>3.Design and Build:</h2>
+								<p>We constructed a prokaryotic expression vector containing LuxCDABE and validated it
+									in the lab using BL21 (DE3) in the hope of achieving bioluminescence in making
+									engineered bacteria.</p>
+								<div class="row mx-auto d-flex justify-content-center wi-lg-100">
+									<img src="https://static.igem.wiki/teams/5210/engineer-cycle/engineer-cycle-2.png"
+										alt="Gut-sweeper" style="width:70%;cursor:pointer;">
+								</div>
+
+								<h2>4.Test:</h2>
+								<p>we cloned the synthesised luxCDABE fragment onto the pet-28a plasmid. Subsequently,
+									we transformed the plasmid and blank pet-28a plasmid into E. coli BL21,
+									respectively. After seeding cells and overnight incubation, we extracted equal
+									volumes of bacterial cultures using 0.5 mM IPTG induced at 12°C for 10 h.
+									Subsequently, luminescence was performed for naked eye observation and luminescence
+									test was performed using a microplate reader.</p>
+								<div class="row mx-auto d-flex justify-content-center wi-lg-100">
+									<img src="https://static.igem.wiki/teams/5210/engineer-cycle/engineer-cycle-3.png"
+										alt="Gut-sweeper" style="width:100%;cursor:pointer;">
+								</div>
+
+								<h2>5.Learn:</h2>
+								<p>Unfortunately, we did not observe luminescence with our naked eye in the preliminary
+									experiments. After adjusting the IPTG induction concentration and time we reran the
+									experiment, but the results were still unsatisfactory. Analysing the results of the
+									experiment we believe that the gene line was the cause of the failure, and in the
+									next cycle we will improve the existing gene line.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- 2. L-Cycle2 -->
+					<div id="Lc2">
+						<div class="row my-5">
+							<div class="col-lg-12 boxcontainer reveal-on-scroll" data-aos="fade-up">
+								<h1>Cycle2: Enhanced luminescence</h1>
+								<h2>1.Research:</h2>
+								<p>In order to optimise the gene line, we conducted a lot of literature research and
+									browsed past iGEM teams, and finally found that the 2023 Shanghaitech_China team
+									also used the lux gene cluster and improved it by introducing luxF and G to enhance
+									the luminescence intensity. In addition, for luxF and G, we found literature
+									supporting that they can enhance the luminescence intensity of luxCDABE
+									<sup>[1,2]</sup>.</p>
+
+								<h2>2.Imagine:</h2>
+								<p>We plan to introduce luxF, G to enhance the luminous intensity of engineered
+									bacteria.</p>
+
+								<h2>3.Design and Build:</h2>
+								<p>Before we planned to design the plasmid, we contacted Shanghaitech_China and got the
+									pet28a-LuxCDABEFG plasmid as a gift from Shanghaitech_China, we are very grateful to
+									them for their support!</p>
+								<div class="row mx-auto d-flex justify-content-center wi-lg-100">
+									<img src="https://static.igem.wiki/teams/5210/engineer-cycle/engineer-cycle-4.png"
+										alt="Gut-sweeper" style="width:60%;cursor:pointer;">
+								</div>
+
+								<h2>4.Test:</h2>
+								<p>We performed the same experiment as Cycle1 to test the luminescence ability of the
+									optimised line, and the results show that our optimisation was successful! We
+									successfully observed the blue fluorescence with the naked eye! After observing the
+									fluorescence with the naked eye, we performed a luminescence test with a 15s long
+									exposure shot and a versatile microplate reader.</p>
+								<div class="row mx-auto d-flex justify-content-center wi-lg-100">
+									<img src="https://static.igem.wiki/teams/5210/result-17.jpg"
+										alt="Gut-sweeper" style="width:100%;cursor:pointer;">
+								</div>
+
+								<h2>5.Learn:</h2>
+								<p>Through the optimisation of the gene line and the introduction of luxF and G, we
+									successfully made the engineered bacteria emit blue fluorescence and achieved the
+									expected goal. However, we are not satisfied with this, in order to further verify
+									the area and intensity of luminescence that our engineered bacteria can achieve in
+									real-life applications, the modelling group will carry out modelling simulations.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- 3. L-Cycle3 -->
+					<div id="Lc3">
+						<div class="row my-5">
+							<div class="col-lg-12 boxcontainer reveal-on-scroll" data-aos="fade-up">
+								<h1>Cycle3: Osmotic receptivity</h1>
+								<h2>1.Research:</h2>
+								<p id="ff2">Making the engineered bacteria glow at the right time is another key issue after
+									successfully making the engineered bacteria capable of luminescence, and either too
+									early or too late luminescence can cause negative impacts in the practical
+									application of the project. In order to achieve accurate tracing without affecting
+									the correct judgement, we need to modify the engineered bacteria so that they emit
+									light quickly when they sense a distressing environment.</p>
+
+								<h2>2.Imagine:</h2>
+								<p>The most notable feature of seawater is the high osmotic pressure, can we make the
+									engineered bacteria start to glow as soon as they hit the water and feel the high
+									osmotic pressure?</p>
+								<div class="row mx-auto d-flex justify-content-center wi-lg-100">
+									<img src="https://static.igem.wiki/teams/5210/engineer-cycle/engineer-cycle-6.png"
+										alt="Gut-sweeper" style="width:80%;cursor:pointer;">
+								</div>
+
+								<h2>3.Design and Build:</h2>
+								<p>We conducted a literature review and found that bacteria can sense changes in
+									external osmotic pressure via the EnvZ/OmpR two-component system <sup>[3]</sup>. The
+									EnvZ/OmpR system is prevalent in Gram negative bacillus, and EnvZ regulates OmpR by
+									sensing changes in osmotic pressure, which subsequently affects the expression
+									levels of membrane pore proteins OmpC and OmpF expression levels. By constructing
+									gene circuits, we could achieve to make the engineered bacteria glow in a high
+									osmotic pressure environment i.e., they start to glow after falling into water.</p>
+								<div class="row mx-auto d-flex justify-content-center wi-lg-100">
+									<img src="https://static.igem.wiki/teams/5210/engineer-cycle/engineer-cycle-7.png"
+										alt="Gut-sweeper" style="width:80%;cursor:pointer;">
+								</div>
+
+								<h2>4.Test:</h2>
+								<p>We verified the functionality of the two-component system in the laboratory using
+									BL21(DE3). We ligated the reporter gene downstream of Pompc and configured the
+									medium with different NaCl concentrations to culture the engineered bacteria. The
+									ability of the EnvZ/OmpR two-component system to sense osmotic pressure in the
+									external environment was verified by observing the reporter gene expression of the
+									engineered bacteria after incubation in medium with different NaCl concentrations.
+								</p>
+								<div class="row mx-auto d-flex justify-content-center wi-lg-100">
+									<img src="https://static.igem.wiki/teams/5210/engineer-cycle/engineer-cycle-8.png"
+										alt="Gut-sweeper" style="width:70%;cursor:pointer;">
+								</div>
+
+								<h2>5.Learn:</h2>
+								<p>Our experimental results show that increasing osmolarity effectively increases
+									reporter gene expression over a range of osmotic pressures, suggesting that our
+									genetic circuit design was successful in achieving the desired results. However, we
+									saw a decrease in reporter gene expression as osmolarity continued to increase. This
+									is because the BL21(DE3) we used in the lab is not tolerant to high osmolarity, and
+									its activity decreases in high osmolarity environments, resulting in a decrease in
+									gene expression. The chassis cell we chose for our project is Vibrio natriegens,
+									which can survive in high salt environment and is expected to achieve better
+									results.</p>
+								<div class="row mx-auto d-flex justify-content-center wi-lg-100">
+									<img src="https://static.igem.wiki/teams/5210/result-18.png"
+										alt="Gut-sweeper" style="width:100%;cursor:pointer;">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- 4. L-Cycle4 -->
+					<div id="Lc4">
+						<div class="row my-5">
+							<div class="col-lg-12 boxcontainer reveal-on-scroll" data-aos="fade-up">
+								<h1>Cycle4: Night selectivity</h1>
+								<h2>1.Research:</h2>
+								<p id="ff4">Our PI pointed out that our engineered bacteria mainly play a tracer role at night,
+									and it seems redundant to emit light during the day, so we can consider
+									proliferation and substrate and energy accumulation during the day to enhance the
+									intensity of light emission at night. According to the expert's opinion, we analyse
+									the role of each gene in the lux gene cluster and look for optogenetic tools.</p>
+
+								<h2>2.Imagine:</h2>
+								<p>We hope to separate luxCDEFG, which generates fluorescent substrate, from luxAB,
+									which encodes luciferase, and introduce optogenetic tools so that luxAB is expressed
+									only in the dark environment, while luxCDEFG is not regulated by light, and
+									continues to accumulate substrate, to achieve the purpose of conserving substrate
+									and energy, and enhancing the intensity of luminescence.</p>
+								<div class="row mx-auto d-flex justify-content-center wi-lg-100">
+									<img src="https://static.igem.wiki/teams/5210/engineer-cycle/engineer-cycle-10.png"
+										alt="Gut-sweeper" style="width:40%;cursor:pointer;">
+								</div>
+
+								<h2>3.Design and Build:</h2>
+								<p>We introduced the UV-induced promoter PumuDC and repressor protein CI, downstream
+									luxAB expression is repressed when UV intensity is high during the daytime, and when
+									UV decreases at night the repressor effect also decreases, and luxAB expression
+									starts to glow. While the rest of the genes are not regulated by light, which means
+									that substrate accumulation does not stop.</p>
+								<div class="row mx-auto d-flex justify-content-center wi-lg-100">
+									<img src="https://static.igem.wiki/teams/5210/engineer-cycle/engineer-cycle-11.png"
+										alt="Gut-sweeper" style="width:80%;cursor:pointer;">
+								</div>
+
+								<h2>4.Test:</h2>
+								<p>We characterised the UV promoter PumuDC in the laboratory by assaying reporter gene
+									expression.</p>
+								<div class="row mx-auto d-flex justify-content-center wi-lg-100">
+									<img src="https://static.igem.wiki/teams/5210/engineer-cycle/engineer-cycle-12.png"
+										alt="Gut-sweeper" style="width:90%;cursor:pointer;">
+								</div>
+								<p>However, the results of the experiment were not satisfactory, and prolonged UV
+									irradiation did not have the desired effect of increasing the expression of the
+									reporter gene.</p>
+
+								<h2>5.Learn:</h2>
+								<p>By reflecting on the process and results of the experiment, we found that too much UV
+									light was the main reason for the failure, and that too much UV light killed the
+									bacteria more than it initiated gene expression.</p>
+								<p>Before adjusting the UV intensity to continue the experiment, we reflected and
+									analysed the genetic circuit again. PumuDC is a classical promoter associated with
+									the DNA damage response in prokaryotes (especially E. coli), and it plays an
+									important role in the SOS response in bacteria. In the absence of DNA damage stress,
+									such as UV light, PumuDC is repressed by the LexA protein, which, as a key repressor
+									of the SOS response, binds to specific DNA sequences in the SOS-associated promoter
+									and represses the transcription of SOS-responsive genes. When bacterial DNA is
+									damaged by factors such as UV light, ssDNA accumulates. the RecA protein recognises
+									and binds to this single-stranded DNA, forming the RecA-ssDNA complex. This complex
+									activates the protease function of RecA and promotes the self-cleavage of the LexA
+									protein. with the self-cleavage and degradation of the LexA protein, the inhibition
+									of PumuDC is lifted.</p>
+								<div class="row mx-auto d-flex justify-content-center wi-lg-100">
+									<img src="https://static.igem.wiki/teams/5210/engineer-cycle/engineer-cycle-13.png"
+										alt="Gut-sweeper" style="width:80%;cursor:pointer;">
+								</div>
+								<p>Our review of the literature revealed that for PumuDC activation, UV-C radiation is
+									the most effective, significantly inducing SOS responses in the range of 10-50 J/m²
+									<sup>[4]</sup>. However, in the natural environment, UV-C is almost entirely
+									absorbed by the atmosphere and cannot reach the ground. Strong sunlight can indeed
+									activate the PumuDC promoter via UV-B, but the activation effect is weaker compared
+									to that of direct UV-C light sources in the laboratory. The effect of sunlight
+									activation is limited by the UV-B content in the atmosphere and the exposure time,
+									and it usually takes a longer period of direct sunlight exposure to achieve a The
+									effect of sunlight activation is limited by the UV-B content in the atmosphere and
+									the exposure time.</p>
+								<p>Therefore, this promoter was not suitable for our project, and through further review
+									of the literature, we found an optogenetic tool for far-red light-regulated
+									transcriptional activation apparatus that has been well characterised
+									<sup>[5]</sup>.</p>
+								<div class="row mx-auto d-flex justify-content-center wi-lg-100">
+									<img src="https://static.igem.wiki/teams/5210/engineer-cycle/engineer-cycle-14.png"
+										alt="Gut-sweeper" style="width:80%;cursor:pointer;">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- 5. L-Cycle5 -->
+					<div id="Lc5">
+						<div class="row my-5">
+							<div class="col-lg-12 boxcontainer reveal-on-scroll" data-aos="fade-up">
+								<h1>Cycle5: Aggregative luminescence exploration</h1>
+								<h2>1.Research:</h2>
+								<p>In order to further enhance the luminescence intensity, we interviewed Prof
+										Junlong Zhao. Prof Zhao believes that the expansion of luminescence
+									intensity and area requires the use of marine native luminescent bacteria, rather
+									than relying solely on the proliferation of engineered bacteria to produce
+									luminescence. This is in line with the "in situ resource utilisation" concept of
+									iGEM's Space villiage, but here we are using in situ resources from the ocean rather
+									than from outer space.</p>
+
+								<h2>2.Imagine:</h2>
+								<p>We hope to cause Vibrio fischeri in the ocean to aggregate and fluoresce, further
+									increasing the intensity and area of luminescence.</p>
+
+								<h2>3.Design and Build:</h2>
+								<p>We investigated how Vibrio fischeri move in the ocean and found that Vibrio fischeri
+									are predominantly chemotactic. Vibrio fischeri sense changes in chemicals in their
+									surroundings and respond with chemotactic movements, which help them to find
+									nutrient-rich areas or avoid harmful substances. Chemotaxis relies on methyl
+									receptor chemotactic proteins (MCPs) to sense chemical gradients, which influence
+									bacterial motility by redirecting the rotation of the flagellum through a series of
+									signal transduction pathways.</p>
+								<p>We wanted to achieve the aim of aggregating Vibrio fischeri in the ocean by adding
+									chemotaxis to the lyophilised bacterial powder, the chemotaxis that were included
+									for consideration were:</p>
+								<ul style="list-style:disc;font-weight: bold;font-size: 18px;">
+									<li>Amino acids (glutamic acid, alanine, etc.)</li>
+									<li>Sugars (glucose, lactose, etc.)</li>
+									<li>Fatty acids (oleic, stearic, etc.)</li>
+									<li>N-Acyl homoserine lactone (AI-1)</li>
+								</ul>
+								<div class="row mx-auto d-flex justify-content-center wi-lg-100">
+									<img src="https://static.igem.wiki/teams/5210/engineer-cycle/engineer-cycle-15.png"
+										alt="Gut-sweeper" style="width:70%;cursor:pointer;">
+								</div>
+
+								<h2>4.Test:</h2>
+								<p>Analysing the chemotactic compounds we chose, most of them are nutrients except for
+									the Quorum sensing molecule N-acyl homoserine lactones (AHLs), which, while allowing
+									Vibrio fischeri to aggregate through chemotaxis, are also chemotactic for other
+									marine bacteria, including a number of Pathogenic bacteria (Vibrio parahaemolyticus,
+									Vibrio cholerae), causing these bacteria to aggregate is an undesirable outcome that
+									poses a greater risk.</p>
+
+								<h2>5.Learn:</h2>
+								<p>We discarded the use of nutrients as chemotaxis agents and continued to review the
+									literature with the aim of exploring chemotaxis agents that can specifically
+									aggregate Vibrio fischeri. We found that N-acetylneuraminic acid and (GlcNAc)2 in
+									chitosan, as substances that help Vibrio fischeri to colonise the squid, have a
+									specific and strong attraction to Vibrio fischeri, and we decided to use them as
+									chemotaxis agents <sup>[6,7]</sup>.</p>
+								<p>In addition, we believe that this strategy requires a certain amount of Vibrio
+									fischeri in the oceans (especially at the surface), and in the future we will
+									further investigate this data in different parts of the planet and optimise our
+									project.</p>
+							</div>
+						</div>
+					</div>
+
+
+					<!-- 6. S-Cycle1 -->
+					<div id="Sc1">
+						<div class="row my-5">
+							<div class="col-lg-12 boxcontainer reveal-on-scroll" data-aos="fade-up">
+								<h1>Cycle 1: Strain selection</h1>
+								<h2>1.Research:</h2>
+								<p>What are the conditions that our engineered bacteria have to fulfil in order to meet
+									search and rescue needs?</p>
+								<p>Our HP investigation of the fluorescent sea phenomenon found that it was due to the
+									proliferation of Dinoflagellates, represented by Noctiluca, to the point of strong
+									fluorescence, suggesting that nutrient factors such as phosphorus, potassium and
+									iron are elevated in the seawater in this area, allowing bacteria, cyanobacteria and
+									unicellular algae, which are used as food by the Dinoflagellates, to Dinoflagellates
+									as food for bacteria, cyanobacteria and unicellular algae. This is one of the
+									precursors of seawater eutrophication, which, if it develops further, may result in
+									an explosive growth of Dinoflagellates, leading to the formation of red tides.</p>
+								<p>We investigated and analysed the principle of luminescence, and found that the
+									luminescence of Noctiluca originates from its intracellular luciferin-luciferase
+									reaction. Luciferin is a class of small molecules, which can be used as a substrate
+									to bind to luciferase, and luciferase uses ATP to make the luciferin release
+									luminescence, completing the conversion of chemical energy to light energy. In
+									addition, a number of bacteria are also capable of similar bioluminescence through
+									the luciferin-luciferase reaction.</p>
+								<p>Since our engineered bacteria will be used in rescue missions, in addition to being
+									able to emit light we also need the engineered bacteria to be able to proliferate
+									and emit light quickly after the user is in distress. In addition, due to the
+									uncertainty of the status of the rescue target, the chassis cell we choose should be
+									non-pathogenic to human body. Combined with the above, our project firstly considers
+									the safety of the rescuers, not only to ensure that the engineered bacteria can emit
+									light to play the localisation effect, but also not to cause additional harm to the
+									rescuers. This requires us to find a chassis cell that can meet the above
+									conditions.</p>
+
+								<h2>2.Imagine:</h2>
+								<p>Can we use safe bioluminescent phenomena for tracing?</p>
+								<p>In our research phase, we have already discovered some autoluminescent organisms, and
+									the mechanism of luminescence of some of the organisms discovered in the preliminary
+									stage has been applied in the field of synthetic biology, we can start with
+									autoluminescent organisms and examine their advantages and disadvantages as project
+									chassis cells, and then consider whether to import known luminescence systems with
+									common synthetic biology chassis cells.</p>
+								<h2>3.Design and Build:</h2>
+								<p>In order to determine the final chassis cell to be used, we
+									investigated a variety of luminescent bacteria, analysed the principles of
+									bioluminescence, and took chassis cells commonly used in synthetic biology into
+									consideration.</p>
+									<figcaption class="pt-3 ps-3 text-center">
+										<strong>Table. 1 | Comparison of bacterial project adaptability</strong>
+									</figcaption>
+
+								<style>
+									table.item-table tr:nth-child(even) {
+										background-color: #fff;
+									}
+
+									table.item-table th {
+										border-color: inherit;
+										border-style: solid;
+										border-width: 1px;
+									}
+
+									.item-table tbody,
+									.item-table td,
+									.item-table tfoot,
+									.item-table th,
+									.item-table thead,
+									.item-table tr {
+										border-color: inherit;
+										border-style: solid;
+										border-width: 1px;
+									}
+
+									.ttc {
+										color: #000000 !important;
+										background-color: rgb(219, 227, 244);
+									}
+								</style>
+								<table class="model item-table">
+									<tbody>
+										<tr style="background: rgb(33, 115, 192)">
+											<th></th>
+											<th>Vibrio fischeri</th>
+											<th class="ttc">Vibrio qinghaiensis</th>
+											<th class="ttc">Vibrio harveyi</th>
+											<th>E. coli</th>
+											<th>Vibrio natriegens</th>
+										</tr>
+										<tr style="background: rgb(255, 255, 255)" >
+											<td>advantages</td>
+											<th class="ttc">Self-luminous;
+												Tolerant of the sea;
+												non-pathogenic
+											</th>
+											<th class="ttc">Self-luminous;
+												non-pathogenic
+											</th>
+											<th class="ttc">Self-luminous;
+												marine
+											</th>
+											<th>More commonly used chassis cell; easy to operate</th>
+											<th>Rapid growth;
+												Tolerant of the sea;
+												non-pathogenic
+											</th>
+										</tr>
+										<tr style="background: rgb(219,227,244)">
+											<td>drawbacks</td>
+											<th class="ttc">Luminescence dependent Quorum sensing</th>
+											<th class="ttc">Freshwater luminous bacteria; not adapted to the sea</th>
+											<th class="ttc">virulence</th>
+											<th>Not adapted to the sea;
+												non-self-illuminating
+											</th>
+											<th>non-self-illuminating</th>
+										</tr>
+									</tbody>
+								</table>
+								<p>All luminescent bacteria have biochemically similar luminescence systems, all of
+									which are luciferase luminescent encoded by a cluster of lux genes, and the reaction
+									mechanism involves the oxidation of flavin mononucleotide (FMNH2) and long-chain
+									aliphatic aldehydes (RCHO) in the reduced state to FMN and long-chain fatty acids
+									(RCOOH) in the presence of molecular oxygen and luciferase and the emission of light
+									with a wavelength of 490 nm of blue-green light.Bacterial luciferase consists of a
+									heterodimer containing an α-subunit (molecular weight 42 kDa) and a β-subunit
+									(molecular weight 37 kDa), and is active only when the two subunits coexist. The
+									optimal temperature for this enzyme reaction is 18°C, and it is rapidly inactivated
+									above 25°C. This luminescence system has been introduced into the chassis cell by
+									mature means, so we chose this as the basic luminescence line.</p>
+
+
+								<h2>4.Test:</h2>
+								<p>Firstly, we tested the autoluminescent organisms first, since Vibrio qinghaiensis and
+									Vibrio harveyi were obviously not compatible with the requirements, we cultured
+									Vibrio fischeri in the laboratory for the test (culture conditions: 22℃ 16h static
+									cultivation), and successfully observed the bioluminescence phenomenon.</p>
+								<div class="row mx-auto d-flex justify-content-center wi-lg-100">
+									<img src="https://static.igem.wiki/teams/5210/engineer-cycle/engineer-cycle-16.png"
+										alt="Gut-sweeper" style="width:80%;cursor:pointer;">
+								</div>
+								<p>By analysing the results of the experiments, we found that Vibrio fischeri can emit
+									fluorescence visible to the naked eye, which can indicate the effectiveness of the
+									luminescence system. However, we also found that the growth rate of Vibrio fischeri
+									is too slow and its luminescence is dependent on Quorum sensing, which does not meet
+									the requirement of rapid proliferation and luminescence.</p>
+								<p>Under the guidance of PI, we discovered a new fast-growing chassis cell developed in
+									recent years: Vibrio natriegens, which is the shortest known free-living bacterium,
+									with a generation time of less than 10 min, and is a more mature synthetic biology
+									tool than Vibrio fischeri.synthetic biology tool, and is better suited for
+									subsequent lineage transformations.</p>
+
+								<h2>5.Learn:</h2>
+								<p>We ultimately chose to use Vibrio natriegens as the chassis cell and plan to
+									introduce the lux gene encoding luciferase to enable it to bioluminesce. In this
+									way, the engineered bacteria will be able to utilise their properties to meet the
+									requirements of the rescue standard. After selecting the appropriate strain, at this
+									point, due to the uncertainty of the environmental factors, we considered the degree
+									of adaptation of the engineered bacteria to the external environment in more depth.
+									In order to ensure the effectiveness of the product, we need to explore ways to
+									enhance the adaptability of the engineered bacteria in order to improve the
+									survivability.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- 7. S-Cycle2 -->
+					<div id="Sc2">
+						<div class="row my-5">
+							<div class="col-lg-12 boxcontainer reveal-on-scroll" data-aos="fade-up">
+								<h1>Cycle2: Microbial Survival</h1>
+								<h2>1.Research:</h2>
+								<p>We first learnt that the average temperature of the world's oceans is around 20°C,
+									with lower temperatures in most seas. Through reviewing the literature, we found
+									that although Vibrio natriegens is a bacterium of marine origin, its optimal growth
+									temperature is 37℃. We believe that the low temperature stress in the ocean has a
+									great impact on the effectiveness of the engineered bacteria, and that low
+									temperatures can lead to ROS accumulation inducing cell death. After research we
+									identified two areas that need to be targeted for a solution: metabolic
+									replenishment and elimination of ROS accumulation. In addition, when the application
+									scenario is transferred to the space, the engineered bacteria not only face the
+									challenge of low temperature, but also the threat of radiation to their survival.
+									Our famous synthetic biologist, Prof. Xianen Zhang, confirmed our consideration of
+									radiation in space, and he believed that the simple use of physical isolation is
+									costly and not conducive to the maintenance of the activity of the algal system. He
+									suggested that we should learn about Deinococcus radiodurans, understand its defence
+									mechanism and apply the core function part flexibly to our chassis cell.</p>
+
+								<h2>2.Imagine:</h2>
+								<p>Firstly, we want to reduce the metabolic impact of low temperature stress on Vibrio
+									natriegens. We thought of supporting the survival of Vibrio natriegens by providing
+									additional efficient carbon source, which can provide more metabolic materials for
+									Vibrio natriegens to reduce the impact. Secondly, low temperature can coerce the
+									bacteria to accumulate ROS in a stress response and lead to cell death, and we want
+									to reduce the accumulation of ROS. We thought of achieving this by inducing the
+									activation of the expression of enzymes involved in ROS degradation. Can we fuse
+									these two solutions to be embodied in fewer gene lines to reduce the metabolic
+									burden on the bacteria? And for defence against space radiation, can we rationalise
+									the expression of key proteins that play a role in radiation protection to confer
+									radiation resistance to engineered bacteria?</p>
+								<h2>3.Design and Build:</h2>
+								<p>We found an algal-bacterial coexistence system through literature
+									search. One of them, Polychlorophyta PCC7942, imported the cscB sucrose permease
+									gene and expressed a sucrose/proton isotransporter capable of secreting sucrose. The
+									alga is able to utilise sunlight and CO<sub>2</sub> produced by Vibrio natriegens'
+									life activities for photosynthetic carbon cycling, generating sucrose which is then
+									secreted extracellularly with the aid of the transporter, and Vibrio natriegens is
+									able to utilise sucrose as a carbon source for metabolism (see Figure. A)<sup>[8]</sup>. In order to enhance the salt tolerance of Polycystis
+									aeruginosa, we selected a salt-tolerant strain of PCC7002. This algal coexistence
+									system solved the metabolic aspects and we built on this system for cold-tolerant
+									lines. We learned that ROS are converted to H<sub>2</sub>O<sub>2</sub> by Superoxide dismutase
+									(SOD), and then catalase catalyses the decomposition to H<sub>2</sub>O and
+									O<sub>2</sub> . We then established a sucrose-sensing switch in Vibrio natriegens,
+									p<sub>SacB</sub> , which can be activated in the presence of sucrose to express the
+									downstream SOD, catalase to catabolise ROS. In addition, we have learnt that RecF
+									and RecO of Deinococcus radiodurans have been applied to the construction of
+									prokaryotic expression systems to confer radiation resistance to prokaryotes
+									(see Figure. B). In this way, the microbial survival part of the
+									problem is solved.</p>
+								<div class="row mx-auto d-flex justify-content-center wi-lg-100">
+									<img src="https://static.igem.wiki/teams/5210/result-23.jpg"
+										alt="Gut-sweeper" style="width:110%;cursor:pointer;">
+								</div>
+
+
+								<h2>4.Test:</h2>
+								<p>We determined the molecular weight of each protein by querying. Since the effect of
+									p<sub>SacB</sub> promoter is more clear, our experiment mainly explored whether SOD
+									and catalase can be expressed.Pet-28a was used as a vector for two target genes, and
+									the proteins were expressed in engineering bacteria by IPTG induction. We set up two
+									groups of 0 mM IPTG treatment and 0.5 mM IPTG treatment according to the
+									pre-experiment. SDS-PAGE experiments were carried out after low-temperature
+									induction to initially observe the expression of target proteins (see Figure
+										A). As for exploring the expression of RecO and RecF, we introduced the
+									two genes into Pet-30b vector separately as two experimental groups, and induced
+									them with 0.5 mM IPTG for 1h, 2h, 3h and 4h, respectively, and the same
+									low-temperature induction was carried out to perform SDS-PAGE experiments, and the
+									two groups were compared for observing the expression of the target proteins
+									(see Figure B).</p>
+								<div class="row mx-auto d-flex justify-content-center wi-lg-100">
+									<img src="https://static.igem.wiki/teams/5210/result-24.jpg"
+										alt="Gut-sweeper" style="width:100%;cursor:pointer;">
+								</div>
+								<p>In addition, we tested the anti-radiation effect of RecO and RecF, with untransformed
+									and blank plasmid-transformed E. coli as control groups.</p>
+								<div class="row mx-auto d-flex justify-content-center wi-lg-100">
+									<img src="https://static.igem.wiki/teams/5210/engineer-cycle/engineer-cycle-19.png"
+										alt="Gut-sweeper" style="width:80%;cursor:pointer;">
+								</div>
+
+								<h2>5.Learn:</h2>
+								<p>In this cycle we have addressed the issue of the impact of environmental variables on
+									the survival of microorganisms. However, a new problem arose: the product is not in
+									constant use in specialised scenarios, such as rescue at sea, and should normally be
+									"asleep". At the same time, we believe that the product needs to be well preserved
+									and quickly recovered.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- 8. S-Cycle3 -->
+					<div id="Sc3">
+						<div class="row my-5">
+							<div class="col-lg-12 boxcontainer reveal-on-scroll" data-aos="fade-up">
+								<h1>Cycle3: Product Preservation</h1>
+								<h2>1.Research:</h2>
+								<p>We have conducted a preliminary exploration of sea rescue as an application scenario
+									for our product. The luminescence needs to be limited by the ocean scenario, i.e.,
+									luminescence only occurs in the ocean. The high osmotic environment of the ocean can
+									be used as a prerequisite for luminescence. In addition, our products are dormant in
+									normal times and only function when needed. Day-to-day preservation of our products
+									is what we want to focus on in this cycle.</p>
+
+								<h2>2.Imagine:</h2>
+								<p>In the marine application scenario, can genetic elements be introduced to feel the
+									luminescence of hypertonic environment? To avoid accidental activation of the
+									product when it is not in daily use state, is there any preservation method to make
+									the engineered bacteria temporarily dormant and revive them when in use?</p>
+								<h2>3.Design and Build:</h2>
+								<p>For sensing the hypertonic environment, we used the Envz-OmpR
+									two-component system. The effectiveness of this system has been described in detail
+									in the luminescence section of the engineer cycle. As for the preservation method,
+									we looked up the following commonly used bacterial preservation methods to choose
+									from.</p>
+									<figcaption class="pt-3 ps-3 text-center">
+                                        <strong>Table. 2 |</strong>
+                                        <b>Comparison of bacterial preservation methods</b>
+                                    </figcaption>
+								<style>
+									table.item-table2 tr:nth-child(even) table.item-table2 th {
+										border-color: inherit;
+										border-style: solid;
+										border-width: 1px;
+									}
+
+									.item-table2 tbody,
+									.item-table2 td,
+									.item-table2 tfoot,
+									.item-table2 th,
+									.item-table2 thead,
+									.item-table2 tr {
+										border-color: inherit;
+										border-style: solid;
+										border-width: 1px;
+									}
+								</style>
+								<table class="model item-table2">
+									<tbody>
+										<tr style="background: rgb(33, 115, 192)">
+											<th></th>
+											<th>Cryopreservation</th>
+											<th>Lyophilised preservation</th>
+											<th>Agar slant culture</th>
+											<th>Oil Seal Preservation</th>
+										</tr>
+										<tr style="background: rgb(255, 255, 255)">
+											<th>vantage</th>
+											<th>Can be stored for several years, suitable for most bacteria</th>
+											<th>Long shelf life, good stability, easy to transport, no need for
+												continuous energy supply</th>
+											<th>Simple method, low cost</th>
+											<th>Can be stored at room temperature without special equipment</th>
+										</tr>
+										<tr style="background: rgb(219,227,244)">
+											<th>drawbacks</th>
+											<th>Requires special equipment and is costly</th>
+											<th>The freeze-drying process may result in the death of a portion of the
+												bacteria</th>
+											<th>Requires medium</th>
+											<th>Relatively short shelf life and need for medium</th>
+										</tr>
+									</tbody>
+								</table>
+								<p>Considering the stability, convenience, commerciality and long-term effectiveness of
+									the preservation method, we finally choose the lyophilised powder preservation
+									method. (ps: Although it will cause the death of some bacteria, our engineered
+									bacteria grow fast, so as long as we ensure that there are bacteria surviving, it
+									will not affect the effectiveness of the product too much.)</p>
+
+
+								<h2>4.Test:</h2>
+								<p>Lyophilised powder preservation technology is more mature nowadays, and the purpose
+									of our test is mainly to determine whether the lyophilised powder technology can be
+									applied to our products. We resuspended the bacterial particles in 10% sucrose LB
+									medium and subjected them to a gradient freezing treatment, with the treatment
+									temperatures being successively: -4°C, -20°C, and -80°C. The powder was then made
+									into lyophilised powder using a lyophiliser (see Figure A). Then the lyophilised
+									bacterial powder was made using a lyophiliser (see Figure A). Then
+									we added LB medium to the ep tube containing the lyophilised bacterial powder for
+									resuscitation to dissolve it completely. After that, we performed operations such as
+									plate coating and bacterial inoculation to consider the bacterial growth(see
+										Figures B, C, and D), and found that the growth state of the
+									lyophilised bacterial powder was close to the normal level after resuscitation.</p>
+								<div class="row mx-auto d-flex justify-content-center wi-lg-100">
+									<img src="https://static.igem.wiki/teams/5210/engineer-cycle/engineer-cycle-20.png"
+										alt="Gut-sweeper" style="width:80%;cursor:pointer;">
+								</div>
+
+								<h2>5.Learn:</h2>
+								<p>The testing section illustrates the ability of our product to use lyophilised powder
+									as a form of bacterial preservation. At this point we have probably perfected a
+									series of safety issues before the product can be used.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- 9. S-Cycle4 -->
+					<div id="Sc4">
+						<div class="row my-5">
+							<div class="col-lg-12 boxcontainer reveal-on-scroll" data-aos="fade-up">
+								<h1>Cycle4: Preventing false positives and leakage</h1>
+								<h2>1.Research:</h2>
+								<p>Our synthetic biologist, Prof He Jin, has raised the issue of false positives on the
+									safety of our products, that is, the situation where the luminescent bacteria drift
+									and are not localised properly. In response to this problem, our stem group used a
+									filter membrane and electrostatic spinning technology to ensure that the luminescent
+									bacteria were positioned around the target. After further consideration of Professor
+									He Jin's suggestion, we found that the problem of false positives cannot be fully
+									solved by hardware, but also by biological leakage caused by hardware damage. In
+									addition, biological leakage can also cause a series of ecological safety problems.
+									Therefore, in this cycle, we mainly address the safety issues caused by microbial
+									leakage.</p>
+
+								<h2>2.Imagine:</h2>
+								<p>The previous construction of the algae-bacteria coexistence system and the
+									cold-resistant module can allow the leaking engineering bacteria to passively die
+									due to the lack of carbon source and the accumulation of ROS. However, other
+									scenarios are not necessarily low carbon source and low temperature. Considering the
+									future multi-scenario applicability of the product, can we engineer bacteria to be
+									able to actively commit suicide after leakage?</p>
+								<h2>3.Design and Build:</h2>
+								<p>We designed two lines to sense sucrose concentration to achieve
+									active suicide. Firstly, we used P<sub>SacB</sub> to sense sucrose concentration,
+									and then set up the repressor protein lacI to control the expression of MazF toxin
+									protein. Line 1 reduces the secretion of lacI when sucrose concentration decreases
+									around the engineered bacteria, thus weakening the deterrence of P<sub>lac</sub> by
+									lacI, which in turn expresses MazF to kill the bacteria. Considering the expression
+									level of P<sub>SacB</sub> and the possibility of killing when it is not used. We
+									improved the sensing of sucrose according to line I. Line II enabled the engineered
+									bacteria to activate the sensing of sucrose only in the hypertonic environment of
+									the ocean, and after entering the ocean, the spare sucrose in the product and the
+									sucrose produced by the algae inhibited the deterrence of P<sub>scr</sub> by ScrR,
+									which led to the expression of lacI and the non-expression of MazF. After the
+									engineered bacteria were detached from the system, the sucrose concentration was
+									reduced, the inhibition of P<sub>scr</sub> by ScrR was enhanced, the expression of
+									lacI was reduced, and MazF was then expressed to play a killing role.</p>
+								<div class="row mx-auto d-flex justify-content-center wi-lg-100">
+									<img src="https://static.igem.wiki/teams/5210/engineer-cycle/engineer-cycle-21.png"
+										alt="Gut-sweeper" style="width:90%;cursor:pointer;">
+								</div>
+
+
+								<h2>4.Test:</h2>
+								<p>We mainly test the line two part. Due to the complexity of the line, this part of the
+									test we would like to analyse the repressor protein in the line by molecular docking
+									technique. lacI is a repressor protein commonly used in the field of synthetic
+									biology, and its deterrent effect on <sub>lac</sub> is relatively precise.
+									Therefore, in order to verify the validity of sucrose sensing, we talked about
+									docking ScrR and <sub>scr</sub> to analyse the binding of both before sucrose
+									treatment.</p>
+								<p>After analysis, we found that the conformation of ScrR protein did change after MD
+									simulation of sucrose treatment (see Figure. A), and the affinity of
+									ScrR to P<sub>lac</sub> before and after simulation did not change significantly,
+									but the binding mode changed. The results showed that only a small portion of
+									sucrose-treated ScrR binds to P<sub>lac</sub> , and the DNA position of
+									P<sub>lac</sub> is far away from ScrR, which allows space for the transcriptase to
+									bind to P<sub>lac</sub> to activate transcription (see Figures B, C, and
+										D).</p>
+								<div class="row mx-auto d-flex justify-content-center wi-lg-100">
+									<img src="https://static.igem.wiki/teams/5210/engineer-cycle/engineer-cycle-22.png"
+										alt="Gut-sweeper" style="width:90%;cursor:pointer;">
+								</div>
+
+								<h2>5.Learn:</h2>
+								<p>We have constructed an active kill line that senses changes in sucrose concentration,
+									forming a comprehensive passive-active anti-leakage module. In this way, our
+									products are largely protected against problems such as false positives and
+									ecological damage.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- 10. S-Cycle5 -->
+					<div id="Sc5">
+						<div class="row my-5">
+							<div class="col-lg-12 boxcontainer reveal-on-scroll" data-aos="fade-up">
+								<h1>Cycle5: Product recovery</h1>
+								<h2>1.Research:</h2>
+								<p>We addressed the safety of product use in the previous cycle, and this cycle needed
+									to address the safety of the product after use to ensure the safety of the entire
+									product line. We focused on brainstorming ways to deal with microorganisms after
+									use.</p>
+
+								<h2>2.Imagine:</h2>
+								<p>Can we improve on the methodology of previous cycles to get a treatment plan?</p>
+
+								<h2>3.Design and Build:</h2>
+								<p>We have a two-way approach to this.</p>
+								<p>①The first is the conservative treatment of artificially induced killing: we
+									initially designed a temperature control system and a drug control system to promote
+									engineered bacterial toxin proteins to trigger bacterial death by controlling the
+									temperature or adding inducers.</p>
+								<div class="row mx-auto d-flex justify-content-center wi-lg-100">
+									<img src="https://static.igem.wiki/teams/5210/engineer-cycle/engineer-cycle-23.png"
+										alt="Gut-sweeper" style="width:80%;cursor:pointer;">
+								</div>
+								<p>②Secondly, there is the recycling method of freeze-dried recovery: our products are
+									preserved in the form of freeze-dried powder, and the recycling of products can be
+									achieved by reformulating the used products into freeze-dried powder. Of course,
+									recycling is an idea and may need to be put into practice to prove.</p>
+
+								<h2>4.Test:</h2>
+								<p>We mainly reviewed and screened the drug control system. We initially selected two
+									commonly used inducers: arabinose and rhamnose, however, when comparing the
+									properties of these two inducers, we found that rhamnose degrades slowly in the
+									natural environment and may remain in the water column for a long period of time,
+									causing potential bioaccumulation and environmental pollution. Rhamnose may have
+									negative effects on aquatic organisms, especially microorganisms and aquatic plants.
+									High concentrations of rhamnose may interfere with the physiological and ecosystem
+									functions of aquatic organisms. Compared to rhamnose, arabinose is generally
+									considered to have less or negligible impacts in the marine environment. Arabinose
+									is a naturally occurring simple carbohydrate that can be utilised as a carbon source
+									by many micro-organisms and aquatic organisms. It is usually well biodegradable and
+									can be rapidly broken down and utilised by microorganisms. It is a natural product
+									that does not usually cause discomfort or toxic reactions in organisms, is usually
+									released in small amounts in the marine environment and can be rapidly broken down
+									by micro-organisms in the water without causing long-term accumulation or pollution
+									problems.</p>
+
+								<h2>5.Learn:</h2>
+								<p>Therefore, we considered arabinose as a better choice to construct a simple
+									drug-inducing system. However, whether the inducer can effectively kill the
+									engineered bacteria in seawater still needs further experimental proof. In this
+									cycle we mainly propose solutions for the safety of the product after use, and the
+									test results can only initially reflect the feasibility of these constructive
+									methods, after which more rigorous proof is needed.</p>
+							</div>
+						</div>
+					</div>
+
+
+
+					<!------------------------以下这里是references-------------------------->
+					<div id="references1" style="box-shadow: 0 6px 7px -2px rgba(0,0,0,0.5);">
+						<div class="row my-5" style="cursor: pointer">
+							<button class="btn d-flex justify-content-between accordion-general w-100" type="button"
+								data-bs-toggle="collapse" data-bs-target="#references-d" aria-expanded="false"
+								aria-controls="references-d" onclick="myFunction(this)">
+								<h1 class="accordion-general-label">References</h1>
+								<div>
+									<div class="container">
+										<div class="bar1"></div>
+										<div class="bar2"></div>
+										<div class="bar3"></div>
+									</div>
+								</div>
+							</button>
+							<div class="collapse px-0" id="references-d" style="margin-top: -10px;">
+								<div class="card card-body accordion-general-content px-5">
+									<ol>
+										<li>Brodl, E. et al., The impact of LuxF on light intensity in bacterial
+											bioluminescence. j Photochem Photobiol B <b>207</b> 111881 (2020).
+										</li>
+										<li>Nijvipakul, S. et al., LuxG is a functioning flavin reductase for
+											bacterial luminescence. j BACTERIOL <b>190</b>1531 (2008).</li>
+										<li>Kenney, L. J. & Anand, G. S., EnvZ/OmpR Two-Component Signaling: an
+											Archetype System That Can Function Noncanonically. ecoSal Plus <b>9</b>
+											(2020).</li>
+										<li>Smith, B. T. & Walker, G. C., Mutagenesis and more: umuDC and the
+											Escherichia coli SOS response. genetics <b>148</b> 1599 (1998).</li>
+
+										<li>Ye HF and Niu LX and Qiao LL and Wang ZH and Guan NZ. A prokaryotic
+											far-red light-regulated transcriptional activation device and its
+											construction method and application in tumour therapy. CN Patent
+											202210607219.2. Dec 08, 2023.</li>
+										<li>Visick, K. L., Stabb, E. V. & Ruby, E. G., A lasting symbiosis: how
+											Vibrio fischeri finds a squid partner and persists within its natural host.
+											NAT rev microbiol <b>19</b> 654 (2021).</li>
+										<li>Mandel, M. J. et al., Squid-derived chitin oligosaccharides are a
+											chemotactic signal during colonisation by Vibrio fischeri. Appl Environ
+											Microbiol <b>78</b> 4620 (2012).</li>
+										<li>Li, C. et al., A Highly Compatible Phototrophic Community for
+											Carbon-Negative Biosynthesis. Angew Chem Int Ed Engl <b>62</b> e202215013
+											(2023)</li>
+
+									</ol>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+{% endblock %}

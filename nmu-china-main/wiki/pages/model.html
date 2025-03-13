@@ -1,0 +1,937 @@
+{% extends "layout.html" %}
+  
+{% block title %}Model{% endblock %}
+{% block lead %}Explain your model's assumptions, data, parameters, and results in a way that anyone could understand.{% endblock %}
+
+{% block page_content %}
+	<style>
+		/* 2024//11/28新版图片+公式布局 */
+		.information {
+			display: flex;
+			align-items: center;
+		}
+		.information img{
+			margin: 0 auto;
+		}
+		.text_bh{
+			
+			margin-right: 0;
+			color: #000000;
+			text-indent: 0;
+		}
+	</style>
+
+	<!-- Page Content -->
+	<div class="inner-banner inner-bg3 header-mask"
+		style="background: url(https://static.igem.wiki/teams/5210/photo/model.jpg) no-repeat center 65% fixed;
+			width: 100%;background-size: cover;height: 94vh;">
+		<div class="container">
+			<div class="inner-title">
+				<h3>Model</h3>
+			</div>
+			<!----scroll icon------->
+			<div class="wrapper">
+				<div class="scroll-hint">
+					<p style="text-indent: unset;">Scroll To Explore</p>
+					<div class="icon-scroll">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Page Content  请大家编辑以下部分 -->
+	<div class="container relative" style="max-width: 1300px">
+
+		<!-- Overview -->
+		<div class="boxcontainer reveal-on-scroll" style="margin-top: 2.5em;width: 100%;">
+			<h1>Overview</h1>
+			<p>Our project focuses on the development of an innovative Bio-Beacon Rescue Locator, aiming to significantly enhance the efficiency and safety of search and rescue operations in marine and space environments. To achieve this goal, we have constructed a series of interconnected and highly integrated model systems, encompassing a disaster prediction model, a marine luminescent life-saving model, and a space application evaluation model. These models jointly visualize the dynamic expression of genetic circuits and explore their practical application values. A brief overview of the model framework is depicted in Figure 1.</p>
+			<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+				<img src="https://static.igem.wiki/teams/5210/yuantu/032.png"
+				style="width:80%;"></div>
+			<figcaption class="pt-3 ps-3 text-center">
+				<strong>Figure. 1 |</strong>
+				<b>Basic Framework of Model</b>
+			</figcaption>
+			<br>
+
+			<p>Firstly, we systematically reviewed the data on marine and air disasters globally from 2021 to 2023. Utilizing time-series analysis techniques and density regression models, we predicted potential high-risk periods and regions for accidents in 2024. This forward-looking analysis not only enhanced the authenticity and urgency of subsequent simulation scenarios but also ensured that our solutions could flexibly respond to diverse rescue needs.</p>
+			<p>Subsequently, to accurately portray the macro-trends of luminescent biological systems in response to environmental changes, we constructed a refined population growth model. This model delved into the growth characteristics and dynamic equilibria of key organisms such as Vibrio Natriegens and Synechococcus, laying a solid foundation for understanding and optimizing their luminescent properties. On this basis, we further refined the gene circuit expression model, incorporating critical biological factors such as photosynthetic efficiency and promoter activation mechanisms. By consulting literature, utilizing VeloVI framework predictions, and conducting sensitivity analyses, we set scientifically reasonable parameters and validated the robustness of the model.The study further utilized the Monte Carlo simulation algorithm to simulate randomized helicopter maritime search and rescue scenarios, with time as a variable. It compared the success rates of conventional rescue operations with those of rescue operations equipped with a bioluminescent genetic system.</p>
+			<p>To fully exploit the luminescent potential of the Bio-Beacon Rescue Locator, we introduced genetic algorithms for optimizing model parameters. This process significantly improved the system's response speed and sensitivity to light changes, providing a theoretical basis and practical guidance for the formulation of subsequent control strategies.</p>
+			<p>Lastly, with an eye towards the future, we constructed a space application evaluation model. This model comprehensively considered the ecological environments, lighting conditions, and potential challenges of different planets, comprehensively assessing the applicability of the Bio-Beacon Rescue Locator in space exploration and rescue missions. This forward-thinking analysis not only broadened the product's application domains but also provided new directions for its future commercialization and international cooperation.</p>
+		</div>
+
+		<div>
+			<!-- 目录 -->
+			<nav id="sidenav-wrapper" class="col-3 d-flex" style="height: 95%;">
+				<ul class="mcd-menu" style="height: 420px;">
+					<li style="border-top-left-radius: 7px;
+						border-top-right-radius: 7px; 
+						box-shadow: 0 6px 7px -2px rgba(0,0,0,0.5);">
+						<a href="#m1" class="sidenav-link nav-link">
+							<strong>Model Hypothesis</strong>
+						
+						</a>
+					</li>
+					<li style="box-shadow: 0 6px 7px -2px rgba(0,0,0,0.5);">
+						<a href="#m2" class="sidenav-link nav-link">
+							<strong>Disaster Prediction Model</strong>
+							
+						</a>
+					</li>
+					
+					<li style="box-shadow: 0 6px 7px -2px rgba(0,0,0,0.5);">
+						<a href="#m3" class="sidenav-link nav-link">
+							<strong>Luminous Life-Saving Model</strong>
+							
+						</a>
+						<ul style="z-index: 100000 !important;list-style: none;">
+							<li><a href="#m3-1">Cold Tolerance and Safety Module</a></li>
+							<li><a href="#m3-2">The Substrate Accumulation Module</a></li>
+							<li><a href="#m3-3">Luminescence Module</a></li>
+							<li><a href="#m3-4">Parameter Estimation</a></li>
+							<li><a href="#m3-5">Solution and Sensitivity Analysis</a></li>
+							<li><a href="#m3-6">Monte Carlo simulation</a></li>
+							<li><a href="#m3-7">Optimization of Results</a></li>
+						</ul>
+					</li>
+					<li style="box-shadow: 0 6px 7px -2px rgba(0,0,0,0.5);">
+						<a href="#m4" class="sidenav-link nav-link">
+							<strong>Space Feasibility Analysis</strong>
+							
+						</a>
+					</li>
+					<li style="box-shadow: 0 6px 7px -2px rgba(0,0,0,0.5);">
+						<a href="#m5" class="sidenav-link nav-link">
+							<strong>Molecular Docking Test of Repressor Protein</strong>
+							
+						</a>
+						<ul style="z-index: 100000 !important;list-style: none;">
+							<li><a href="#m5-1">Background</a></li>
+							<li><a href="#m5-2">Steps</a></li>
+							<li><a href="#m5-3">Outcome analysis</a></li>
+							<li><a href="#m5-4">Summary</a></li>
+						</ul>
+					</li>
+					<li style="box-shadow: 0 6px 7px -2px rgba(0,0,0,0.5);">
+						<a href="#references2" class="sidenav-link nav-link">
+							<strong>Appendix</strong>
+							
+						</a>
+					</li>
+					<li style="border-bottom-left-radius: 7px;
+						border-bottom-right-radius: 7px;
+						box-shadow: 0 6px 7px -2px rgba(0,0,0,0.5);">
+						<a href="#references1" class="sidenav-link nav-link" style="border-bottom: unset;">
+							<i class="fa fa-book"></i>
+							<strong>References</strong>
+						</a>
+					</li>
+					<li style="background-color: unset;">
+						<div class="tangdouren" style="text-align: center;margin-top: 10px;">
+						  <a href="#" style="border-bottom: unset;"><img src="https://static.igem.wiki/teams/5210/logo-astronaut-2.png" alt="糖豆人" style="width: 242px;-webkit-filter: drop-shadow(4px 4px 5px rgba(0,0,0,0.5));filter: drop-shadow(4px 4px 5px rgba(0,0,0,0.5));"></a>
+						</div>
+						<div class="brother2"><img src="https://static.igem.wiki/teams/5210/logo/logo-5.png" alt="" width="35%" style="position:absolute;top:0px;left:40%;-webkit-filter: drop-shadow(4px 4px 5px rgba(0,0,0,0.5));filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.5));"></div>
+					</li>
+				</ul>
+
+
+			</nav>
+
+
+			<div id="page-content-wrapper" class="col-lg-9 ms-auto">
+
+				<div id="m1">
+					<div class="row my-5">
+						<div class="col-lg-12 boxcontainer reveal-on-scroll" data-aos="fade-up">
+							<h1>Model Hypothesis</h1>
+							<h2>a.Disaster Prediction Model</h2>
+							<p style="text-indent: 0;">1.We suppose that collected data about shipwreck and air crash can represent the real situation around the whole world.</p>
+							<p style="text-indent: 0;">2.When analyzing the periods and regions with high incidence of accidents, we mainly focus on major factors such as seasonality, temporal distribution and geographical location while the detailed effects of other secondary factors (such as human error, mechanical failure, etc.) are relatively ignored.</p>
+							<h2>b.Luminous Life-Saving Model</h2>
+							<p style="text-indent: 0;">1.We suppose that growth characteristics of Vibrio Natriegens(such as specific growth rate, maximum bacterial body number, etc.) are stable under certain conditions and can be determined experimentally.</p>
+							<p style="text-indent: 0;">2.The expression of gene lines (e.g., promoter activation, gene expression, etc.) follows known biochemical principles and can be simulated by mathematical models.</p>
+							<p style="text-indent: 0;">3.The conversion efficiency of Synechococcus photosynthesis and UV intensity change in sine wave within one day.</p>
+							<p style="text-indent: 0;">4.There is no interference from artificial light, and we exclude light pollution or light superposition effect caused by external artificial lighting equipment (such as ships, aircraft, lighthouse or other artificial structures), thus ensuring reasonable assessment of Bio-Beacon Rescue Locator luminous efficiency and its actual effect in search and rescue action natural light conditions (such as day and night change, ultraviolet intensity, etc.) under natural light conditions.</p>
+							<h2>c.Space Feasibility Analysis </h2>
+							<p style="text-indent: 0;">1.The planet data collected (such as light conditions, temperature, gravity, etc.) is accurate and reliable, and can represent the true situation of the planet.</p>
+							<p style="text-indent: 0;">2.Selected evaluation indicators can fully reflect the applicability of Bio-Beacon Rescue Locator in space.</p>
+							<p style="text-indent: 0;">3.The luxAB system and its substrates can maintain stable and active under the temperature, light and other conditions of the target planet.</p>
+							<p style="text-indent: 0;">4.Long-term operation of the system will not be seriously affected by the special environment of the planet (such as strong radiation, extreme temperature difference, etc.).</p>
+
+						</div>
+					</div>
+				</div>
+
+				<!-- 1. 第一部分 -->
+				<div id="m2">
+					<div class="row my-5">
+						<div class="col-lg-12 boxcontainer reveal-on-scroll" data-aos="fade-up">
+							<h1>Disaster Prediction Model</h1>
+							<p>When delving into the intricate issues of global shipping, aviation safety, and emergency response strategies, we cannot help but direct our attention to the unprecedented challenges and transformations that the global shipping and aviation industries have undergone in recent years, particularly since the outbreak of the COVID-19 pandemic in 2020. This global public health crisis has not only reshaped the international trade landscape but also profoundly impacted every aspect of maritime and air transportation, encompassing the stability of logistics supply chains and maritime safety regulation, among others. The HP group has conducted a preliminary assessment of the frequency of maritime disasters and the effectiveness of current rescue efforts, emphasizing the criticality of enhancing rescue efficiency and reducing response time. <a href="https://2024.igem.wiki/nmu-china/human-practices#three2" style="color: #027efb;">Click here</a> to view the detailed information.</p>
+							<p>Against this backdrop, conducting an in-depth analysis and research on major maritime and aviation accidents in the past three years (from 2021 to 2023) has become particularly urgent and important. The International Maritime Organization (IMO), as a specialized agency within the United Nations system responsible for maritime safety, navigation efficiency, and the prevention and control of pollution of the marine environment by ships, providing invaluable data resources through its Global Integrated Shipping Information System (GISIS).</p>
+							<p style="text-indent: 0;">(Data Resources: <a href="https://gisis.imo.org/Public/MCIR/InvestigationReportsDashboard.aspx" style="color: #027efb;">https://gisis.imo.org/Public/MCIR/InvestigationReportsDashboard.aspx</a>)</p>
+							<p>GISIS not only encompasses detailed information on the global fleet but also includes data on maritime accidents and incidents recorded in accordance with rigorous standards (MSC-MEPC.3/Circ.4/Rev.1 Circular). These data play a role in understanding the causes of accidents, identifying risk areas, and predicting future trends. We have collected data on maritime and aviation disasters and compiled partial results as shown in Figure 2.</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-new-9.png"
+								style="width:80%;"></div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 2 |</strong>
+								<b>Statistics of Some Accidents</b>
+							</figcaption>
+							<br>
+
+							<p>To facilitate the presentation of the geographical density of maritime accidents, a global probability density map was plotted based on GPS coordinates.</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-new-2.png"
+								style="width:80%;"></div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 3 |</strong>
+								<b>Geographical Distribution of Accidents</b>
+							</figcaption>
+							<br>
+
+							<p>Based on a study of global maritime accident data from 2010 to 2019, using density analysis and cluster analysis, it was found that the North Sea, Baltic Sea, and Mediterranean Sea regions formed clusters of low-severity accidents. Over 60% of accidents occurred within 30 nautical miles from the coastline. Specifically, high-severity accident clusters were identified in the coastal waters surrounding China, Japan, South Korea, Vietnam, and the Philippines, as well as in the Singapore-Malacca Strait and the Bay of Biscay<sup>[1]</sup>. After scrutinizing our dataset, distinct clusters of accidents emerged in the vicinity of the Koper seaport and within Río Negro province in Argentina. This underscores the vulnerability of regions characterized by narrow waterways and densely populated ports to a higher incidence of accidents. July was identified as the peak month for accidents, and temporal analysis revealed the highest frequency of accidents occurring at night (concentrated between midnight and sunrise). A statistical overview of monthly accident frequency throughout the year is presented in Figure 4. According to the investigation report of the Ningbo Maritime Bureau, 18.54% of accidents were attributed to poor visibility and limited field of view at night, 13.43% to operational errors, and 6.63% to decision-making errors based on misinterpretation. The relatively low traffic volume at night can contribute to distractions, visual fatigue, and reduced response capabilities.</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-new-13.png"
+								style="width:80%;"></div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 4 |</strong>
+								<b>Statistics of Accident Frequency in Each Month</b>
+							</figcaption>
+							<br>
+
+							<p>Previous researchers have focused on the roles of various factors contributing to accidents and attempted to describe the correlations among them using diverse models. Zhou et al. established a novel database that captures the characteristics of all Risk Influencing Factors (RIF<sub>s</sub>) and developed a data-driven risk analysis model based on Bayesian Networks (BN) for analyzing casualty situations in maritime accidents<sup>[2]</sup>. Building upon the acquired data, we utilized the ARIMA model to analyze the temporal characteristics of accidents. The basic idea of ARIMA is that the data sequence formed by the prediction over time is regarded as a random sequence and a model can be used to approximately describe this sequence. Once this sequence is identified, the model can predict future values from past and present values of the time series.</p>
+							<p>The ARIMA model integrates the auto-regression (AR) and moving average (MA) models to fit and forecast time-series data, specifically aiming to predict the timing of the next five occurrences or events. The AR component characterizes the relationship between the current value and its lagged values, utilizing historical data to project future values. Meanwhile, the MA component leverages the linear combination of past residual terms to estimate future residuals. The comprehensive ARIMA prediction model can be formulated as follows:</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-5.png"
+								style="width:50%;">
+								<!-- 例子:图片宽度不超过100%即可。外层div加个align-items-center属性 -->
+								<p class="text_bh">(1.1)</p>
+							</div>
+
+							<p>where <i>𝑝</i> is the order of Autoregressive Model (AR), <i>𝑞</i> is the order of Moving Average Model (AM), ɛ<sup><i>{t}</i></sup> is the Error term between time <i>t</i> and <i>t-1</i>, <i>γ</i><sub><i>j</i></sub> and <i>θ</i><sub><i>j</i></sub> are the fitting coefficients, <i>𝑝</i><sub><i>0</i></sub> is constant term.</p>
+							<p>For the prediction of geographical coordinates, the Random Forest Regression algorithm is employed, leveraging time differences as input features. This approach exploits the historical relationship between time differences and geographical coordinates to forecast future latitudes and longitudes, respectively. The Random Forest algorithm, a supervised machine learning method, is constructed through an ensemble of decision trees as base learners. By introducing randomness into the training process of decision trees, it effectively copes with data noise and complex relationships, thereby enhancing prediction accuracy<sup>[3]</sup>. In terms of data preprocessing, we perform scaling on timestamps and geographical coordinates to prevent the model from being overly sensitive to large-scale numerical variations.</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-6.png"
+								style="width:80%;"></div>
+							<p>In accordance with the established disaster prediction model, the subsequent accidents are predicted to mainly occur around 0:00 in the night, with a relatively scattered distribution in terms of longitude and latitude. Therefore, focusing on the predicted high-risk period and locations of maritime accidents by the model, we choose the early morning as the simulated accident occurrence time, and set the GPS coordinates approximately at 25°30.00' N, 62°30.00' E in the northern Arabian Sea (near the coast of Pakistan) as the simulated accident site for subsequent modeling. Founded on this model, we conduct an in-depth analysis of the specific impacts of unique environmental factors during this period on the development of accidents, so as to evaluate the efficiency of the constructed luminous system and effectively improve the survival rate of people in maritime disasters. This analysis closely matches the actual high-risk periods and locations, significantly enhancing the authenticity of the simulated scenarios and ensuring the extensive adaptability and pertinence of our work.</p>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- 2. 第二部分 -->
+				<div id="m3">
+					<div class="row my-5">
+						<div class="col-lg-12 boxcontainer reveal-on-scroll" data-aos="fade-up">
+							<h1>Luminous Life-Saving Model</h1>
+							<p>The main components of the light-emitting system are Synechococcus and Vibrio Natriegens. Synechococcus provides Vibrio Natriegens with necessary nutrients such as sucrose for growth. Considering that population growth is affected by factors such as environmental carrying capacity, we use the Logistics model to simulate the growth of Synechococcus<sup>[4]</sup>:</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-7.png"
+								style="width:30%;">
+								<p class="text_bh">(1.2)</p>
+							</div>
+
+							<p>In this equation, C<sub><i>1</i></sub> represents the quantity of Synechococcus, <i>μ</i><sub><i>1</i></sub> denotes the specific growth rate of the bacteria, and <i>N</i><sub><i>1</i></sub> refers to the maximum tolerable number of bacteria in the culture medium. During the immobilization process, Tian et al. determined that the maximum specific growth rate of Synechococcus in BG-11 medium was 0.74 d<sup>-1</sup>, with a maximum algal density of 9.8×10<sup>8</sup> cells/mL<sup>[5]</sup>. We use differential equations to describe the ability of Synechococcus to produce sucrose:</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-8.png"
+								style="width:15%;">
+								<p class="text_bh">(1.3)</p>
+							</div>
+
+							<p>wherein, <i>s</i> represents the sucrose concentration, and <i>α</i> depicts the photosynthetic conversion efficiency of Synechococcus. Assuming that the sunlight is strongest at noon, we use a sine function (with periodicity) to simulate the variation of <i>α</i>.</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-9.png"
+								style="width:40%;">
+								<p class="text_bh">(1.4)</p>
+							</div>
+
+							<p><i>α</i><sub><i>0</i></sub>：Basic photosynthetic efficiency, which is the efficiency when there is no sunlight.</p>
+							<p><i>α</i><sub><i>1</i></sub>：Amplitude of variation, which is the maximum change in efficiency caused by changes in sunlight intensity.</p>
+							<p>Next, by introducing Vibrio Natriegens and considering the flow of sucrose between the two organisms, the change in sucrose concentration in the system described in Equation (1.3) can be refined through the following equation:</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-10.png"
+								style="width:30%;">
+								<p class="text_bh">(1.5)</p>
+							</div>
+
+
+							<p><i>γ</i><sub><i>1</i></sub> represents the consumption rate of sucrose by Vibrio Natriegens, which is necessary for its growth, development, and promoter binding. The growth of Vibrio Natriegens directly depends on the availability of sucrose. When the concentration of sucrose reaches a certain threshold <i>K</i><sub><i>s</i></sub>, the population begins to grow. We use the Michaelis-Menten kinetic model<sup>[6]</sup> to describe the utilization of sucrose by Vibrio Natriegens:</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-11-2.png"
+								style="width:40%;">
+								<p class="text_bh">(1.6)</p>
+							</div>
+
+							<p>where <i>C</i><sub><i>2</i></sub> represents the number of Vibrio Natriegens, <i>μ</i><sub><i>2</i></sub> denotes its specific growth rate, and <i>k</i><sub><i>1</i></sub> is the inhibition coefficient of Reactive Oxygen Species (ROS) on bacterial growth, which will be elaborated later. Through experimental measurements, the doubling time of Vibrio Natriegens in LBv2 liquid medium was found to be 13.89 minutes<sup>[7]</sup>, based on which the parameters were set.</p>
+							<p>To facilitate the construction of a model for the interactions within the entire system, we will disassemble the main pathways, analyze the internal changes, and then connect them with other pathways.</p>
+
+
+							<br>
+							<!-- a -->
+							<h2 id="m3-1">a.Cold Tolerance and Safety Module</h2>
+							<p>Background: The low-temperature environment of seawater can increase the ROS content in Vibrio Natriegens, which is detrimental to its survival and function. Vibrio Natriegens expresses superoxide dismutase and catalase to decompose ROS into water and oxygen, thereby endowing the engineered bacteria with cold tolerance. <a href="https://2024.igem.wiki/nmu-china/description#ff1" style="color: #027efb;">Click here</a> to view the detailed design information related to this study.</p>
+
+							<h3>1.The binding of sucrose to the <i>P</i><sub><i>sacB</i></sub> promoter</h3>
+							<p>The binding of sucrose to a promoter can be denoted as:</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-new-17.jpg"
+								style="width:30%;">
+								<p class="text_bh">(1.7)</p>
+							</div>
+
+							<p><i>k</i><sub><i>1</i></sub> is the binding rate constant, while <i>k</i><sub><i>-1</i></sub> represents the dissociation rate constant.</p>
+							<p>Change of Unbound Promoter Concentration:</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-13-2.png"
+								style="width:40%;">
+								<p class="text_bh">(1.8)</p>
+							</div>
+
+							<p>Change of Bound Promoter Concentration:</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-14.png"
+								style="width:40%;">
+								<p class="text_bh">(1.9)</p>
+							</div>
+
+							<p>Total Promoter Concentration:</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-15.png"
+								style="width:30%;">
+								<p class="text_bh">(1.10)</p>
+							</div>
+
+							<h3>2.Transcription and Translation of SOD Gene and Catalase</h3>
+							<p>Transcription of SOD Gene:</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-16.png"
+								style="width:50%;">
+								<p class="text_bh">(1.11)</p>
+							</div>
+
+							<p>The translation process:</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-17.png"
+								style="width:40%;">
+								<p class="text_bh">(1.12)</p>
+							</div>
+
+							<p>To facilitate subsequent expressions, the processes of transcription and translation can be conceptually integrated:</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-18.png"
+								style="width:50%;">
+								<p class="text_bh">(1.13)</p>
+							</div>
+
+							<p><i>k</i><sub><i>SOD</i></sub> denotes the transcription rate constant, <i>T</i><sub><i>(SOD)</i></sub> base represents the basal transcription level and <i>γ</i><sub><i>SOD</i></sub> stands for the degradation rate constant. In Vibrio natriegens and Escherichia coli<sup>[8]</sup>, the average half-life of mRNA is approximately 3 minutes. The half-life of proteins was obtained through corresponding database queries.</p>
+							<p>Analogously, for Catalase enzyme expression:</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-19.png"
+								style="width:70%;">
+								<p class="text_bh">(1.14)</p>
+							</div>
+
+							<h3>3.The generation and degradation of ROS</h3>
+							<p>The reaction catalyzed by SOD can be expressed as:</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-20.png"
+								style="width:40%;">
+								<p class="text_bh">(1.15)</p>
+							</div>
+
+							<p>Change of ROS:</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-21.png"
+								style="width:40%;">
+								<p class="text_bh">(1.16)</p>
+							</div>
+
+							<p><i>λ</i> represents the rate of ROS production by a single Vibrio Natriegens, <i>k</i><sub><i>SOD</i></sub> is the rate constant of reactions that are catalyzed by SOD.
+								Generation of the reaction product H<sub>2</sub>O<sub>2</sub>:
+							</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-22.png"
+								style="width:40%;">
+								<p class="text_bh">(1.17)</p>
+							</div>
+
+							<p>Then the catalase breaks down the previous reaction product, hydrogen peroxide, into water and oxygen:</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-23.png"
+								style="width:40%;">
+								<p class="text_bh">(1.18)</p>
+							</div>
+
+							<p>Changes of H<sub>2</sub>O<sub>2</sub>:</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-24.png"
+								style="width:60%;">
+								<p class="text_bh">(1.19)</p>
+							</div>
+
+
+							<br>
+							<!-- b -->
+							<h2 id="m3-2">b.The Substrate Accumulation Module</h2>
+							<p>Background：The Envz-OmpR two-component system can feel the osmotic pressure change. The high osmotic pressure environment of seawater increases the phosphorylation level of OmpR, activates the luxCDEFG expression downstream of the pOmpC promoter. Thus, the luminous substrate begins to accumulate continuously after entering seawater. <a href="https://2024.igem.wiki/nmu-china/engineering#ff2" style="color: #027efb;">Click here</a> to view the detailed design information related to this study.</p>
+
+							<h3>1.Action of the pOmpC Promoter</h3>
+							<p>Assuming that the pOmpC promoter activity is <i>σ</i><sub><i>OmpC(ε)</i></sub>, where ε is the osmotic pressure strength. The process can be regarded as a step function, where the promoter is activated when the osmotic pressure exceeds a certain threshold:</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-25.png"
+								style="width:40%;">
+								<p class="text_bh">(1.20)</p>
+							</div>
+
+							<p><i>β</i> is the slope parameter, <i>ε</i><sup><i>thresh</i></sup> is the threshold of osmotic pressure(The seawater osmotic pressure is about 2.753 kPa). The changes in pOmpC promoter activity are shown in Figure 5.</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-new-5.png"
+								style="width:80%;">
+							</div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 5 |</strong>
+								<b>Change of pOmpC Promoter Activity with Osmolarity</b>
+							</figcaption>
+							<br>
+
+							<h3>2.Expression of LuxCDEFG</h3>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-27.png"
+								style="width:70%;">
+								<p class="text_bh">(1.21)</p>
+							</div>
+
+							<p>LuxCDE provides substrate for luxAB oxidation luminescence, and the substrate accumulation is:</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-28.png"
+								style="width:50%;">
+								<p class="text_bh">(1.22)</p>
+							</div>
+							<p><i>k</i><sub><i>sub</i></sub> is rate constant for substrate synthesis, <i>γ</i><sub><i>sub</i></sub> is the substrate degradation rate constant.</p>
+							
+
+							<br>
+							<!-- c -->
+							<h2 id="m3-3">c.Luminescence Module</h2>
+							<p>Background：The puv promoter is induced by UV, and expresses downstream CI protein repressor luxAB expression when UV is strong during the daytime, only accumulating substrate without luminescence. When UV weakens at night, the repressive effect weakens and luxAB expression begins to glow. <a href="https://2024.igem.wiki/nmu-china/engineering#ff4" style="color: #027efb;">Click here</a> to view the detailed design information related to this study.</p>
+
+							<h3>1.Changes of the UV Intensity</h3>
+							<p>Assuming that UV intensity is sinusoidal throughout the day, reaching the maximum at 12 noon and the minimum at night:</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-29.png"
+								style="width:50%;">
+								<p class="text_bh">(1.23)</p>
+							</div>
+							<p><i>U</i><sub><i>max</i></sub> is the maximum of the UV intensity while <i>U</i><sub><i>min</i></sub> is the minimum (close to 0). <i>t</i> is time(hour).</p>
+
+							<h3>2.Activation of the Puv Promoter</h3>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-30.png"
+								style="width:40%;">
+								<p class="text_bh">(1.24)</p>
+							</div>
+							<p>The degree of activation of the promoter is a function of UV intensity, here reduced to the saturation function, <i>ω</i> is a small normal number used to avoid the denominator of 0, whose activity varies with UV as shown in Figure 6.</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-new-6.png"
+								style="width:80%;">
+							</div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 6 |</strong>
+								<b>Changes of puv promoter activity with UV light</b>
+							</figcaption>
+							<br>
+
+							<h3>3.Expression of the CI Gene</h3>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-32.png"
+								style="width:50%;">
+								<p class="text_bh">(1.25)</p>
+							</div>
+							
+							<h3>4.Changes of the Lam Promoter Activity</h3>
+							<p>The activity of the lam promoter is affected by the repressor action of the CI proteins:</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-33.png"
+								style="width:40%;">
+								<p class="text_bh">(1.26)</p>
+							</div>
+							<p><i>k</i><sub><i>dep</i></sub> is a repressive constant, <i>n</i> is Hill coefficient describing strength of repressive effect.</p>
+
+							<h3>5.Expression of LuxAB</h3>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-34.png"
+								style="width:60%;">
+								<p class="text_bh">(1.27)</p>
+							</div>
+
+							<h3>6.Activation Effect of LuxFG on LuxAB</h3>
+							<p>LuxCDE provide substrate for the luxAB oxidation of luminescence. LuxFG increases the luminescence intensity by further activating the luxAB. To demonstrate activation degree of magnitude, we introduce the variable described as:</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-35.png"
+								style="width:40%;">
+								<p class="text_bh">(1.28)</p>
+							</div>
+							<p><i>F</i><sub><i>max</i></sub> is the maximum activation action constant, <i>K</i><sub><i>f</i></sub> is semi-saturation constant.</p>
+							<p>Take the derivative of it, and observe the change patterns of the variables over time:</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-36.png"
+								style="width:50%;">
+								<p class="text_bh">(1.29)</p>
+							</div>
+							<p>Plug it into the Equation(1.21) and get the result:</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-37.png"
+								style="width:60%;">
+								<p class="text_bh">(1.30)</p>
+							</div>
+
+							<h3>7.Changes of Illumination</h3>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-38.png"
+								style="width:40%;">
+								<p class="text_bh">(1.31)</p>
+							</div>
+							<p><i>η</i> represents the luminous efficiency coefficient, with the potential influence of other regulatory factors (such as pH, temperature, etc.) on the illuminance being temporarily overlooked. By measuring the luminescence of a fixed number of bacteria, an approximate value of <i>η</i> can be fitted.</p>
+							<p>The diffusion of light at the sea surface can be characterized by a variant of the Gaussian distribution in two-dimensional space, which describes the variation in intensity emanating from a point source (or central point) at a given time <i>t</i> as a function of the distance from the central point (x<sub>0</sub>, y<sub>0</sub>). This model exhibits robust fitting capabilities in depicting numerous natural phenomena (e.g. light propagation, heat conduction) and engineering systems (e.g. signal processing, blurring, and denoising in image processing)<sup>[9]</sup>. The formula can be expressed as:</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-39.png"
+								style="width:50%;">
+								<p class="text_bh">(1.32)</p>
+							</div>
+							<p><i>I(x,y,t)</i> represents the illuminance distribution at the spatial point (x,y) at time point <i>t</i>. <i>σ</i> denotes the standard deviation of the Gaussian distribution, which determines the rate of attenuation of illuminance with respect to distance.</p>
+
+
+
+							<br>
+							<!-- d -->
+							<h2 id="m3-4">d.Parameter Estimation</h2>
+							<p>Quantifying the transcription and translation rate constants of individual genes within a model is often challenging, as traditional experimental techniques not only fail to measure general cellular properties across different time points but also lack the capability to assess the speed at which these cellular changes occur. Currently, there exist several prevalent methodologies for estimating RNA velocities, including steady-state models, Expectation-Maximization (EM) models, and deep learning models. Among them, VeloVI (Velocity Inference of Variation) stands out as a deep generative model designed specifically for estimating RNA velocities. It re-infers RNA velocities through a model that shares information across all cells and genes while simultaneously learning the same quantities as in EM models, namely, kinetic parameters and latent times. As its output, VeloVI returns empirical posterior distributions of RNA velocities (posterior samples of gene-cell matrices), which can be incorporated into downstream analyses of the results<sup>[10]</sup>. Furthermore, it offers an interpretability and model criticism layer lacking in previous methods, while significantly enhancing the flexibility of model extension.</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-new-7.jpeg"
+								style="width:80%;">
+							</div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 7 |</strong>
+								<b>Overview of the VeloVI model</b>
+							</figcaption>
+							<br>
+
+							<p style="text-indent: 0;">(From: Deep generative modeling of transcriptional dynamics for RNA velocity analysis in single cells)</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-41.png"
+								style="width:80%;">
+							</div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 8 |</strong>
+								<b>Correlated Gene Sequence Data</b>
+							</figcaption>
+							<br>
+							<p>We have collected relevant gene sequence data (Figure 8) and employed the VeloVI framework integrated within a Python environment to conduct gene-level velocity analysis. The preprocessed and extracted specific gene sequence data were organized according to the format required by the VeloVI framework and served as input data to initiate the model training process. During training, the model learns the intrinsic dynamic properties of the data, ultimately outputting kinetic parameters such as transcription rates for the corresponding genes.</p>
+
+
+
+							<br>
+							<!-- e -->
+							<h2 id="m3-5">e.Solution and Sensitivity Analysis</h2>
+							<p>Based on the constructed differential equations, parameter values in the model were determined through literature review and other relevant sources. The LSODA algorithm, a robust and versatile tool for solving differential equations, was employed to address both stiff and non-stiff problems.</p>
+							<p>The results indicated that sucrose concentration peaked during the night, reflecting a diurnal rhythm. The expression levels of luxAB and CI exhibited an antagonistic relationship, with CI expression decreasing at night. Meanwhile, luxCDEFG and substrate concentrations rapidly increased in the initial stages before stabilizing at a constant rate.</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-new-11.png"
+								style="width:80%;">
+							</div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 9 |</strong>
+								<b>Changes of the Key Parameters in the Model</b>
+							</figcaption>
+							<br>
+
+							<p>Figure 10 depicts the changes in the activity of the lam promoter (<i>σ</i><sub><i>tam</i></sub>), which exhibited a substantial decline around 24 hours, indicative of an enhanced inhibitory effect by CI protein, suppressing downstream gene expression. Approximately 48 hours later, as luxAB expression peaked, promoter activity significantly intensified.</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-new-4.png"
+								style="width:80%;">
+							</div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 10 |</strong>
+								<b>Changes of the Lam Promoter Activity</b>
+							</figcaption>
+							<br>
+
+							<p>Ultimately, the variations in bioluminescence intensity are presented in Figure 11. Initially, the bioluminescence intensity exhibited minimal fluctuations within the first 20 hours. Subsequently, it rapidly intensified, reaching a peak of 1567 lx at 48.87 hours. As the populations of Vibrio Natriegens and Synechococcus stabilized, the bioluminescence intensity fluctuations gradually diminished, maintaining a steady level of approximately 1000 lx.</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-new-3.png"
+								style="width:80%;">
+							</div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 11 |</strong>
+								<b>Changes of the Illumination Degree</b>
+							</figcaption>
+							<br>
+
+							<p>The table below outlines the illuminance values under various environmental conditions<sup>[11]</sup>, highlighting the superiority of the gene circuit integrated into the Bio-Beacon Rescue Locator over the traditional lighting technology employed in TV Studios. This comparison not only visually demonstrates its advantages in brightness, durability, and energy efficiency but also underscores the potential of biotechnology in the field of emergency rescue localization. By harnessing the gene circuit, the Bio-Beacon is capable of emitting a brighter and more stable light, ensuring that rescue signals remain clearly visible even under complex and variable environmental conditions. This significantly enhances the efficiency and success rate of search and rescue operations.</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-45.png"
+								style="width:80%;">
+							</div>
+
+							<p>In order to present the change of sea surface illumination, the light distribution was simulated with Gaussian Distribution and visualized with MATLAB thermal map tool. It is estimated that the maximum coverage radius can reach about 90 meters on the sea.</p>
+							<center>
+								<iframe title="NMU-China: Mendelian Randomization (2023) [English]" width="560" height="315" frameborder="0"  allowfullscreen=""
+								src="https://video.igem.org/videos/embed/c3aeed20-7819-49bc-9ed7-26554612a4e5" 
+								sandbox="allow-same-origin allow-scripts allow-popups">
+								</iframe>
+							</center>
+							<p>In the previous model, parameter <i>η</i> are set to represent the luminescence efficiency coefficient in the expression of illumination I. In actual situations, all kinds of regulatory factors (such as pH, temperature, etc.) can play a role in the luminous effect by affecting the luminous efficiency of the line. To explore the influence of the set parameter <i>η</i> changes on the model results, we conducted a sensitivity analysis and adjusted it up and down by 20% based on the original set value of 30% to simulate the change of external conditions.</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-new-12.png"
+								style="width:80%;">
+							</div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 12 |</strong>
+								<b>Results of the Model Sensitivity Analysis</b>
+							</figcaption>
+							<br>
+							<p>From Figure 12, it is observed that adjusting the values of the key parameter <i>η</i> has some impacts on the model results, but the overall trend does not change. When the value of <i>η</i> is increased, it means that the luminous efficiency of the gene line improves, converting more substrate into optical energy per unit time. However, while and the peak of I increases significantly at this time, more accumulated material is consumed, which results in the decline of the luminous effect after 50 hours. When we decrease the value of <i>η</i>, although the maximum illumination is not as good as that before adjustment, it has stronger stability and less fluctuation after peak, thus more superior in longer rescue. In short, through sensitivity analysis, it is found that our established model has good robustness and does not lead to specific results due to small changes in variables in the actual situation.</p>
+
+
+
+							
+							<br>
+							<!-- f -->
+							<h2 id="m3-6">f.Monte Carlo simulation</h2>
+							<p>The probability of being rescued or surviving after a person falls into the sea, as a function of time, can be simplified and described using a survival function<sup>[12]</sup>, which is expressed as:</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-58.png"
+								style="width:30%;">
+								<p class="text_bh">(1.33)</p>
+							</div>
+							<p>wherein, <i>R</i><sub><i>0</i></sub> represents the initial rescue success rate (the success rate of initiating rescue immediately after a person falls into the water), which depends on factors such as the readiness of the rescue team, the availability of equipment, and others. With the development of related technologies, studies have shown that its value can reach approximately 85%<sup>[13]</sup>. λ is a decay coefficient, indicating the rate of decline in the rescue success rate over time, and it is the weighted sum of multiple influencing factors. Huang et al. studied and concluded that the golden rescue time for a person falling into the water is 12 hours during summer<sup>[14]</sup>. Therefore, for the value of λ, we describe it using a piecewise function as follows:</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-59.png"
+								style="width:30%;">
+								<p class="text_bh">(1.34)</p>
+							</div>
+							<p>Previously, the spreading of light on the sea surface was simulated using a Gaussian distribution. To explore the impact of the constructed bioluminescent genetic system on rescue success rates in practical rescue situations, based on the previous model, a Monte Carlo simulation algorithm was employed to simulate helicopter maritime search and rescue scenarios using a computer. Monte Carlo simulation is a mathematical technique based on random numbers, with its core idea being to approximate the solution to a complex problem through random sampling, which is used to simulate complex systems and solve computational problems, especially those involving multiple variables and a large amount of uncertainty<sup>[15]</sup>. According to research, helicopters typically conduct search and rescue operations at a relatively low altitude of around 50 meters during maritime search and rescue missions to ensure accurate target detection and effective rescue<sup>[16]</sup>. Within a 50-meter range, the minimum illuminance that can be recognized by the human eye is approximately 0.2 microlux (μlx)<sup>[17]</sup>. Therefore, we use this as a threshold and set the search area to 10,000 square meters. The computer will randomly select a sufficient number of sample points at each time interval. Without considering external light sources interfering with the rescue, if the light intensity at a point is greater than 0.2 μlx, it can be considered that the person overboard has the opportunity to be identified by the search and rescue personnel on the helicopter through the bioluminescent system and thus be rescued. Otherwise, they cannot be identified. Based on this idea, we wrote a Python program to compare the rescue success rates under original rescue conditions and those with the bioluminescent genetic system device installed. The results are shown in Figure 13.</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/photo/024.png"
+								style="width:80%;">
+							</div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 13 |</strong>
+								<b>Comparison of rescue success rates between the two scenarios</b>
+							</figcaption>
+							<p>It can be observed that under ordinary rescue conditions, the probability of successful rescue approaches almost zero around the 25-hour mark. Maritime search and rescue missions are characterized by long durations and large search areas, and beyond the golden rescue period, the physical regulation capabilities of individuals are largely lost, while search and rescue forces also face mental and material challenges. However, when the Bio-Beacon Rescue Locator is applied in this scenario, the rescue success rate stabilizes above 60% after 50 hours. Considering the growth characteristics of bacterial colonies, the probability of locating survivors through the bioluminescent system continues to increase over time. Therefore, the Bio-Beacon Rescue Locator can facilitate real-world rescue scenarios by synergizing with various technical means to leverage its advantages in mid-to-late stage rescues.</p>
+							
+							
+							
+							<!-- f -->
+							<h2 id="m3-7">g.Optimization of Results</h2>
+							<p>In order to achieve a more efficient luminescence effect and improve the product application potential, it is necessary to optimize the proposed parameters during the model solution. Considering the complexity of the actual differential equations and scenarios, the genetic algorithm(GA) is selected to optimize the preliminary results.</p>
+							<p>GA, an optimization algorithm based on the principles of biological evolution, seeks the optimal solution in the search space by simulating natural selection and genetic mechanisms. It consists of three basic operations: selection, crossover, and variation.In the selection operation, the fitness of each individual is evaluated according to the fitness function, and the individual with higher fitness is selected to enter the next generation. The crossover operation simulates the process of genetic recombination, combining the genomes of two individuals into a new individual. The variation operation simulates a stochastic process of gene mutation, which randomly changes an individual's gene. It has the characteristics of adaptability, parallelism and robustness, and is widely used in machine learning, artificial intelligence, optimization problems and other fields<sup>[18]</sup>.The framework of genetic algorithm (GA) is shown in Figure 14.</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/yuantu/033.png"
+								style="width:110%;">
+							</div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<b>Figure 14 | Flow Chart of the GA Implementation</b>
+							</figcaption>
+							<br>
+
+							<p>With DEAP (Distributed Evolutionary Algorithms in Python), we implemented the solution of GA (The specific code is shown in the appendix). Figure 15 describes the algorithm iteration effect, where the convergence curve shows a gradual stabilization of the numerical values finally close to around 4600.This trend indicates that the algorithm gradually approaches the optimal solution during iteration and reaches a steady state after a smaller number of iterations.</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-new-8.png"
+								style="width:80%;">
+							</div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 15 |</strong>
+								<b>Convergence Curves Optimized by Genetic Algorithm</b>
+							</figcaption>
+							<br>
+
+							<p>Figure 16 shows the relationship between illumination and other substances after genetic algorithm optimization. Searched optimal I value was 4582.49, achieving an improvement of 192.4% compared to the initial state, reflecting that the configuration in the gene lines can be optimized to significantly improve the response efficiency and regulation ability of the system to the illumination. The significant performance improvement not only proves the powerful potential of genetic algorithms in the optimization of complex systems, but also reveals the advantages of surpassing the traditional design framework by fine-tuning the internal parameters and configuration of the system.</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/photo/023.png"
+								style="width:60%;">
+							</div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 16 |</strong>
+								<b>Relationships among illuminance, Fact and expression of CI</b>
+							</figcaption>
+							<br>
+
+						</div>
+					</div>
+				</div>
+
+
+				<!-- 3. 第三部分 -->
+				<div id="m4">
+					<div class="row my-5">
+						<div class="col-lg-12 boxcontainer reveal-on-scroll" data-aos="fade-up">
+							<h1>Space Feasibility Analysis</h1>
+							<p>With the development of the aerospace industry, we hope that the Bio-Beacon Rescue Locator will no longer be limited to lifesaving activities on Earth, but will also be able to move into space, enjoying broader application space. The HP group has initially compared the marine and space environments, aiming to understand the differences between these two extreme environments from multiple dimensions, including radiation intensity, gravity differences, gas environment composition, salinity characteristics (for oceans), humidity conditions, and potential microbial infection risks, thereby better adapting and optimizing the two product designs: life jackets designed for marine environments and luminous space suits tailored to the needs of space exploration. <a href="https://2024.igem.wiki/nmu-china/human-practices#aa2" style="color: #027efb;">Click here</a> to view the detailed information.</p>
+							<p>To further advance the application of the Bio-Beacon Rescue Locator in space, we will proceed to systematically collect and analyze data from various planets within the Solar System from multiple angles. This process will focus on evaluating the product's suitability and performance in different planetary environments, aiming to identify its potential application values. Based on recommendations from relevant literature<sup>[19-20]</sup>, we have compiled a series of primary evaluation indicators:</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/photo/025.png"
+								style="width:80%;">
+							</div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 17 |</strong>
+								<b>Various evaluation metrics within the model</b>
+							</figcaption>
+
+							<p>① Lighting Conditions:</p>
+							<p><b>External Light Intensity:</b> As luxAB luminescence is regulated by ultraviolet (UV) light, assessing the planet's diurnal cycle and light intensity is crucial to understanding the overall environmental impact on the device's visibility. By collecting data on the planet's rotation and revolution periods, the rotation period reflects its day-night cycle, which influences the rescue locator's luminescence mode during day and night. For instance, on planets with shorter rotation periods, the luxAB system may need to switch from UV inhibition to luminescence within a shorter timeframe. Meanwhile, the revolution period affects the planet's distance from the Sun, thereby influencing light intensity and UV radiation levels.</p>
+
+							<p>② Atmospheric Composition and Pressure:</p>
+							<p><b>Oxygen Content:</b> The luxAB system requires oxygen for oxidation reactions, making the target planet's oxygen concentration a pivotal factor.</p>
+							<p><b>Atmosphere and Atmospheric Pressure:</b> While not directly impacting the luxAB's luminescence mechanism, extreme atmospheric pressures can potentially affect the device's physical integrity and functionality.</p>
+
+							<p>③ Temperature:</p>
+							<p><b>Average Temperature:</b> Given the vast differences in temperatures across planets, it is necessary to evaluate the stability and activity of the luxAB system and its substrates within the temperature range of the target planet.</p>
+							<p><b>Temperature Fluctuations:</b> Diurnal or seasonal temperature variations may impact the long-term operation of the device.</p>
+
+							<p>④ Gravity:</p>
+							<p>Gravity can potentially influence the distribution of internal fluids and reaction rates within the device, although such effects may be relatively minor in the luxAB system, they still need to be considered.</p>
+
+							<p>⑤ Supply Conditions:</p>
+							<p><b>Closest Distance to Earth:</b> For astronauts executing missions, knowing the closest distance to Earth facilitates optimal mission design, ensuring timely communication with Earth in case of emergencies (e.g. energy shortages), and also reveals interplanetary environmental differences.</p>
+							<p><b>Water Resources:</b> The EnvZ-OmpR two-component system is sensitive to osmolarity, affecting the expression of luxCDEFG. Additionally, when astronauts lose contact with the outside world, water resources on the planet become crucial for survival. Therefore, it is essential to understand factors that may affect osmolarity, such as water content on the planet's surface.</p>
+							<p>Upon reviewing relevant materials, we have collected the corresponding data for these evaluation indicators, as shown in Figure 16. To assess the suitability of the Bio-Beacon Rescue Locator on various planets, we will utilize the Rank-Sum Ratio (RSR) Comprehensive Evaluation Method, which is based on ranking the evaluation indicators and using the average rank as the evaluation criterion. This method enables comprehensive evaluation of indicators with different units of measurement<sup>[21]</sup>.</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-new-15.png"
+								style="width:80%;"></div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 18 |</strong>
+								<b>Data of Evaluation Indicators within Each Planet</b>
+							</figcaption>
+							<br>
+
+							<p>Firstly, the data was preprocessed. We set some factors such as the atmospheric pressure, and average surface temperature as intermediate indicators, for which the closer data is to the Earth, the more it is suitable for human habitation. In terms of other indicators such as difference in temperature, it would be better if the value is smaller.
+							</p>
+							<p>Make a linear transformation for the intermediate indicator, making the results fall in [0,1] interval. When the original data is equal to the ideal value, the result is 1; the closer the original data is close to the ideal value, the closer the processed result value is close to 1. The principle can be expressed as：</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-51.png"
+								style="width:35%;">
+								<p class="text_bh">(1.35)</p>
+							</div>
+							<p>For the negative indicators, we converted them into positive indicator, and makes the results fall in the [0,1] interval:</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-52.png"
+								style="width:35%;">
+								<p class="text_bh">(1.36)</p>
+							</div>
+							<p>The evaluation object n=8, and the evaluation index m=12. Based on it, we construct the matrix(8×2) and code rank for it. In order to improve the deficiency of the whole rank sum ratio method, the nonwhole rank sum ratio method is adopted to have a quantitative linear correspondence between the compiled rank and the original index value, thus overcoming the disadvantage of losing the original index value when the RSR method is rank, and obtaining the rank matrix: <i>R</i>=<i>(R<sub>ij</sub>)</i><sub><i>12×8</i></sub></p>
+							<p>In order to determine the weight through the information quantity of the data itself and avoid the bias caused by subjective judgment, the entropy weight method is used to calculate the rank sum ratio, which can be expressed as follows:</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-53.png"
+								style="width:35%;">
+								<p class="text_bh">(1.37)</p>
+							</div>
+							<p><i>R</i><sub><i>ij</i></sub> is the rank of the <i>i</i> object and the <i>j</i> index of the <i>i</i> object, <i>W</i><sub><i>j</i></sub> represents the weight of the <i>j</i> indicator, the weight sum is 1. The larger the <i>WRSR</i><sub><i>i</i></sub> value is, the better the evaluation object is.</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/table-3.png"
+								style="width:80%;">
+							</div>
+							<p>The calculation results of entropy weight method show that the maximum weight of the index is whether there is water on the planet (26.645%), and the minimum value is whether there is atmosphere (5.133%), reflecting the small difference between different planets in this index.</p>
+							<p>The WRSR frequency distribution table, lists the frequency number <i>f</i> of each group , and the cumulative frequency number <i>cf</i> and the cumulative frequency <i>p</i> of each group are calculated, which is converted into the probability unit <i>probit</i>, with the <i>probit</i> value as the independent variable and WRSR as the dependent variable.</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-55.png"
+								style="width:80%;">
+							</div>
+							<p>From the analysis of the results of F test, it can be obtained that the significance P value is less than 0.001, indicating that the level is significant and the null hypothesis of regression coefficient of 0 is rejected. At the same time, the goodness of fit R² is 0.981, reflecting the excellent performance of the model, so the model basically meets the requirements. For variable collinearity performance, the VIF is all less than 10, so the model does not have multicollinearity problems and the model is well constructed. The formula for the model is below:</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-56.png"
+								style="width:40%;">
+								<p class="text_bh">(1.38)</p>
+							</div>
+							<p>Finally, we sort the classification, and the evaluation objects are sorted according to the WRSR estimate calculated by the regression equation. The results are shown in Table 5.
+							</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-57.png"
+								style="width:80%;">
+							</div>
+							<br>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/modeling/modeling-new-14.png"
+								style="width:80%;">
+							</div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 19 |</strong>
+								<b>WRSR fit values for each planet</b>
+							</figcaption>
+							<p>The evaluation results indicate that, apart from Earth, Mars exhibits the highest suitability for the Bio-Beacon Rescue Locator due to its minimal differences in rotational period and water resources compared to Earth's environment. Conversely, the product is deemed unsuitable for application during voyages to Neptune, primarily attributed to the lack of sufficient lighting conditions necessary for the activation of the puv promoter and subsequent expression of downstream genes within the system. This finding aligns with information gathered by <a href="https://2024.igem.wiki/nmu-china/human-practices#three1" style="color: #027efb;">the HP group through interviews</a>, particularly the exchanges with Liu Liwei, a student specializing in aeronautics, who further confirmed Mars as the preferred target for the application scenarios of our project. </p>
+							<p>In the future, we aim to incorporate the DNA repair mechanism of Deinococcus radiodurans into the design of engineered bacteria, with the goal of providing astronauts with more comprehensive and reliable life support during missions to Mars and other potential space exploration endeavors.</p>
+						</div>
+					</div>
+				</div>
+				<!-- 4. 第四部分 -->
+				<div id="m5">
+					<div class="row my-5">
+						<div class="col-lg-12 boxcontainer reveal-on-scroll" data-aos="fade-up">
+							<h1>Molecular Docking Test of Repressor Protein</h1>
+							<h2 id="m5-1">a.Background</h2>
+							<p>In the anti-leakage module, we designed the active killing circuit for sensing sucrose. The overall circuit is relatively complicated, coupled with the lack of materials in the wet experiment, it is difficult to build the whole circuit in the wet laboratory. The effectiveness of the circuit mainly depends on two repressor proteins, ScrR and lacI, and we decided to use molecular docking technology to simulate the function of the repressor proteins. Among them, lacI is widely used and located downstream, while ScrR plays a more important role in the sucrose sensing part of the circuit, so the part we tested was sucrose receptor, that is, to verify whether the presence of sucrose would inhibit ScrR's repression of Pscr.</p>
+                            <p>In order to show the richness of the experiment, we did not use the conventional wet experiment method, but used the computer to simulate the molecular docking test. This isn't just a good simulation of how sucrose receptors work. It was also an exploratory test that inspired us to study in a more microscopic way, providing directions for future project optimization.</p>
+                            <div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/molecular-docking/molecular-docking-1.png"
+								style="width:80%;">
+							</div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 20 |</strong>
+								<b>Data of evaluation indicators within each planet</b>
+							</figcaption>
+							<h2 id="m5-2">b.Steps</h2>
+							<p style="text-indent: 0;">1. Obtain sequences of ScrR and Pscr from Biobricks.</p>
+							<p style="text-indent: 0;">2. Download the 3D structure of small Sucrose molecules from Pubchem and obtain the structure file Sucrose.sdf.</p>
+							<p style="text-indent: 0;">3. ScrR obtains the protein file ScrR.pdb after the protein is translated by the sequence, and then downloads 6NDI from RCSB for subsequent docking with sucrose.</p>
+							<p style="text-indent: 0;">4. Use 3dDNAfold to obtain DNA structure file.</p>
+							<p style="text-indent: 0;">5. Autodock tools were used to process the ScrR as single-chain pdbqt file, and global docking with sucrose was carried out (due to the large protein, it was divided into two parts for docking, and the highest rank was taken, that is, the result of the highest affinity) .And then prepare for molecular dynamics simulation.</p>
+							<p style="text-indent: 0;">6. Conducting molecular dynamics simulation for 240ps(DS standard environment, default force field) .</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/molecular-docking/molecular-docking-2.png"
+								style="width:80%;">
+							</div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 21 |</strong>
+								<b>Raw output parameters of molecular dynamics simulation</b>
+							</figcaption>
+							<p style="text-indent: 0;">7. Before and after molecular dynamics simulation, HDock was used to dock DNA with protein, 100 models were established for each, and the 10 models with the highest rank (highest affinity) were selected for comparison.</p>
+							<p style="text-indent: 0;">8. Visualized the docking results with pymol and other tools for comparative analysis of the results.</p>
+							<h2 id="m5-3">c.Outcome analysis</h2>
+							<p style="text-indent: 0;">1. Firstly, ScrR after sucrose treatment was preliminarily observed. Before and after molecular dynamics simulation, the structure of ScrR protein docked with sucrose did change, indicating that the presence of sucrose can lead to structural changes of ScrR repressor protein.</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/molecular-docking/molecular-docking-3.png"
+								style="width:80%;">
+							</div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 22 |</strong>
+								<b>ScrR conformational change before and after sucrose docking with MD simulation</b>
+							</figcaption>
+							<p style="text-indent: 0;">2. Next, the docking results of ScrR and Pscr were analyzed, and we found that there was no significant difference in rank value before and after molecular dynamics simulation, which meant that the affinity between ScrR and Pscr did not change significantly before and after sucrose treatment, which made us confused, because the general inhibition of repressor proteins was to remove them from DNA.</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/molecular-docking/molecular-docking-4.png"
+								style="width:80%;">
+							</div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 23 |</strong>
+								<b>Affinity comparison between ScrR and Pscr before and after MD simulation</b>
+							</figcaption>
+							<p style="text-indent: 0;">3. We reflected on the affinity results and consulted the data, thinking that the change of binding mode would also inhibit the function of repressor proteins, so we analyzed the relevant data and structure, and found that before MD simulation, DNA and protein cracks were just docked together, and after MD simulation, DNA was forced to move away from proteins due to the reduction of cracks, and only a few sites were bound. Transcription-related enzymes can initiate transcription by binding to parts of the hairpin structure. In addition, according to the data, DNA dissociates during this process, theoretically starting transcription as soon as the dissociation equilibrium occurs.</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/molecular-docking/molecular-docking-5.png"
+								style="width:80%;">
+							</div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 24 |</strong>
+								<b>Changes of ScrR and Pscr combination structure before and after MD simulation</b>
+							</figcaption>
+							<p style="text-indent: 0;">4. Out of interest in the change of binding mode, we amplified and compared the docking sites of ScrR and Pscr before and after MD simulation, and listed the changes of binding si-tes. We believe that the number and specific location of binding sites can affect the degree of DNA exposure, thus affecting the activation of Pscr.</p>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/table-6.png"
+								style="width:80%;">
+							</div>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/molecular-docking/molecular-docking-6.png"
+								style="width:80%;">
+							</div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 25 |</strong>
+								<b>Binding sites of ScrR and Pscr before MD simulation</b>
+							</figcaption>
+							<div class="information mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/molecular-docking/molecular-docking-7.png"
+								style="width:80%;">
+							</div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 26 |</strong>
+								<b>Binding sites of ScrR and Pscr after MD simulation</b>
+							</figcaption>
+							<h2 id="m5-4">d. Summary</h2>
+							<p>This test basically verified the inhibitory effect of sucrose on ScrR, and it was also an exploratory test. This innovative verification method shows us the mysterious molecular world, and also reveals that we can use molecular docking technology to do more line tests in the future, which is helpful to find potential molecular targets for optimization projects.</p>
+
+						</div>
+					</div>
+				</div>
+
+
+				<!------------------------以下这里是references-------------------------->
+				<div id="references2" style="box-shadow: 0 6px 7px -2px rgba(0,0,0,0.5);">
+					<div class="row my-5" style="cursor: pointer">
+						<button class="btn d-flex justify-content-between accordion-general w-100" type="button"
+							data-bs-toggle="collapse" data-bs-target="#references-d2" aria-expanded="false"
+							aria-controls="references-d2" onclick="myFunction(this)">
+							<h1 class="accordion-general-label">Appendix(Python and MATLAB script)</h1>
+							<div>
+								<div class="container">
+									<div class="bar1"></div>
+									<div class="bar2"></div>
+									<div class="bar3"></div>
+								</div>
+							</div>
+						</button>
+						<div class="collapse px-0" id="references-d2" style="margin-top: -10px;">
+							<div class="card card-body accordion-general-content px-5">
+								<iframe src="https://static.igem.wiki/teams/5210/pdf/code-2.pdf" frameborder="0" width="95%"
+									height="700px" noresize="noresize" style="margin:20px auto 5px;">
+								</iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="references1" style="box-shadow: 0 6px 7px -2px rgba(0,0,0,0.5);">
+					<div class="row my-5" style="cursor: pointer">
+						<button class="btn d-flex justify-content-between accordion-general w-100" type="button"
+							data-bs-toggle="collapse" data-bs-target="#references-d1" aria-expanded="false"
+							aria-controls="references-d1" onclick="myFunction(this)">
+							<h1 class="accordion-general-label">References</h1>
+							<div>
+								<div class="container">
+									<div class="bar1"></div>
+									<div class="bar2"></div>
+									<div class="bar3"></div>
+								</div>
+							</div>
+						</button>
+						<div class="collapse px-0" id="references-d1" style="margin-top: -10px;">
+							<div class="card card-body accordion-general-content px-5">
+								<ol>
+									<li>Wang, H., Liu, Z., Liu, Z., Wang, X., & Wang, J. (2022). GIS-based analysis on the spatial patterns of global maritime accidents. Ocean Engineering, 245, 110569.</li>
+									<li>Zhou, K., Xing, W., Wang, J., Li, H., & Yang, Z. (2024). A data-driven risk model for maritime casualty analysis: A global perspective. Reliability Engineering & System Safety, 244, 109925.</li>
+									<li>Mantas, C. J., Castellano, J. G., Moral-García, S., & Abellán, J. (2019). A comparison of random forest based algorithms: random credal random forest versus oblique random forest. Soft Computing (Berlin, Germany), 23(21), 10739–10754.</li>
+									<li>Yuan, P., Lv, Z., & Zhou, G. (2014). Growth kinetics of 3 species of microalgae treated with petroleum hydrocarbon. Hai Yang Ke Xue, 38(10), 46–51.</li>
+									<li>Tian, T., Wang, K.-Y., Liang, G.-Y., Jin, Y.-B., Li, J., Shao, X.-X., & Xu, Y.-C. (2018). Effects of immobilization process on physiological and biochemical characteristics of Synechococcus. WēIshēNgwùXué TōNgbào, 45(9), 1972.</li>
+									<li>Hubert, A., Aquino, T., Tabuteau, H., Meheust, Y., & Le Borgne, T. (2020). Enhanced and non-monotonic effective kinetics of solute pulses under Michaelis-Menten reactions. Advances in Water Resources, 146, 103739.</li>
+									<li>Wu, F., Liang, Y., Zhang, Y., Huo, Y., & Wang, Q. (2020). Construction of seamless genome editing system for fast-growing Vibrio natriegens. Sheng Wu Gong Cheng Xue Bao = Chinese Journal of Biotechnology, 36(11), 2387.
+									</li>
+
+									<li>Bernstein, J. A., Lin, P. H., Cohen, S. N., & Lin-Chao, S. (2004). Global analysis of Escherichia coli RNA degradosome function using DNA microarrays. Proceedings of the National Academy of Sciences of the United States of America, 101(9), 2758–2763.</li>
+									<li>Zhang, W., & Hou, X. (2018). Estimation Algorithm of Atmospheric Light Based on Gaussian Distribution. Ji Suan Ji Ke Xue, 45(4), Ji suan ji ke xue, 2018-01, Vol.45 (4).</li>
+									<li>Gayoso, A., Weiler, P., Lotfollahi, M., Klein, D., Hong, J., Streets, A., … Yosef, N. (2024). Deep generative modeling of transcriptional dynamics for RNA velocity analysis in single cells. Nature Methods, 21(1), 50–59.</li>
+									<li>Ailin, C., Zaizhou, L. I., Qipeng, H. E., Xiaoyang, H. E., Zhisheng, W., & Nianyu, Z. (2018). Study on Matching Value of Illumination in Night Lighting Environments. 2018 15th China International Forum on Solid State Lighting: International Forum on Wide Bandgap Semiconductors China, SSLChina: IFWS 2018, 123–126.</li>
+								    <li>Cope, S., Chan, K., & Jansen, J. P. (2020). Multivariate network meta-analysis of survival function parameters. Research Synthesis Methods, 11(3), 443–456.</li>
+									<li>Zhang, J., & Zhu, Y. (2022). Maritime search and rescue probability of containment model design and simulation. Journal of Physics: Conference Series, 2258(1), 12040.</li>
+									<li>Huang, M. D. (2014). On the Prime Time for Rescue at Sea in Distress. China Maritime Safety, 12, 40-42.</li>
+									<li>Reiweger, I., Genswein, M., Paal, P., & Schweizer, J. (2017). A concept for optimizing avalanche rescue strategies using a Monte Carlo simulation approach. PloS One, 12(5), e0175877.</li>
+									<li>Shen, Y. (2024). The Unique Advantages and Applications of Helicopter Rescue at Sea. Pearl River Water Transport, 4, 114-116.</li>
+									<li>Zhang, J. B., Guo, W. P., Xia, M., Yang, K. C., & Li, W. (2018). Design and Implementation of an LED Navigation System to Assist Ship Entry into Port. Acta Optica Sinica, 38(10), 310-318.</li>
+									<li>Selvam, R., Lim, I. H. Y., Lewis, J. C., Lim, C. H., Yap, M. K. K., & Tan, H. S. (2023). Selecting antibacterial aptamers against the BamA protein in Pseudomonas aeruginosa by incorporating genetic algorithm to optimise computational screening method. Scientific Reports, 13(1), 7582.</li>
+									<li>Heliere, F., Lin, C.-C., Corr, H., & Vaughan, D. (2007). Radio echo sounding of Pine Island Glacier, West Antarctica; aperture synthesis processing and analysis of feasibility from space. IEEE Transactions on Geoscience and Remote Sensing, 45(8), 2573–2582.</li>
+									<li>Periola, A., Alonge, A., & Ogudo, K. (2023). Space-Based Data Centers and Cooling: Feasibility Analysis via Multi-Criteria and Query Search for Water-Bearing Asteroids Showing Novel Underlying Regular and Symmetric Patterns. Symmetry (Basel), 15(7), 1326.</li>
+									<li>Scientific Platform Serving for Statistics Professional 2021. SPSSPRO. (Version 1.0.11)[Online Application Software]. Retrieved from <a href="https://www.spsspro.com" style="color: #027efb;">https://www.spsspro.com</a>.</li>
+									
+								
+								</ol>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

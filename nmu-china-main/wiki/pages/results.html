@@ -1,0 +1,407 @@
+{% extends "layout.html" %}
+  
+{% block title %}Results{% endblock %}
+{% block lead %}You can describe the results of your project and your future plans here.{% endblock %}
+
+{% block page_content %}
+
+	<style>
+		.accordion-general-label{
+			text-align: left;
+		}
+	</style>
+	<!-- Page Content -->
+	<div class="inner-banner inner-bg3 header-mask"
+		style="background: url(https://static.igem.wiki/teams/5210/photo/results-2.jpg) no-repeat center 0% fixed;width: 100%;background-size: cover;height: 94vh;">
+		<div class="container">
+			<div class="inner-title">
+				<h3>Results</h3>
+			</div>
+			<!----scroll icon------->
+			<div class="wrapper">
+				<div class="scroll-hint">
+					<p style="text-indent: unset;">Scroll To Explore</p>
+					<div class="icon-scroll">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Page Content  请大家编辑以下部分 -->
+	<div class="container relative" style="max-width: 1300px;">
+
+		<!-------这个是膜态框的内容，注意这个一定要放在boxcontainer的外面，不然会出bug-------->
+
+		<!--------模态图片 这个是通用的，所有图片共用这一个div-------->
+		<div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+			<br>
+			<div class="w3-modal-content w3-animate-zoom">
+				<img id="img01" style="width:100%">
+			</div>
+		</div>
+
+
+
+
+
+		<div class="boxcontainer reveal-on-scroll" style="margin-top: 2.5em;width: 100%;">
+			<h1>Overview</h1>
+			<p>After a year of concerted efforts and unremitting efforts, the genetic route we designed was basically
+				successful. The growth and luminescence of the algae-fungus mixture system were modeled and verified. In
+				addition, we explored the future application scenarios of the product and developed improvement
+				strategies to put our project into use as soon as possible.</p>
+		</div>
+
+		<div>
+			<!-- 目录 -->
+			<nav id="sidenav-wrapper" class="col-3 d-flex" style="height: 96%;">
+				<ul class="mcd-menu" style="height: 420px;">
+					<li style="border-top-left-radius: 7px;
+						border-top-right-radius: 7px; 
+						box-shadow: 0 6px 7px -2px rgba(0,0,0,0.5);">
+						<a href="#r1" class="sidenav-link nav-link">
+							<strong>Experiment</strong>
+							<small>Experiment results</small>
+						</a>
+					</li>
+					<li style="box-shadow: 0 6px 7px -2px rgba(0,0,0,0.5);">
+						<a href="#r2" class="sidenav-link nav-link">
+							<strong>Model</strong>
+							<small>Model Results</small>
+						</a>
+					</li>
+					<li style="border-bottom-left-radius: 7px;
+						border-bottom-right-radius: 7px;
+						box-shadow: 0 6px 7px -2px rgba(0,0,0,0.5);">
+						<a href="#r3" class="sidenav-link nav-link" style="border-bottom: unset;">
+							<strong>Product</strong>
+							<small>Product design and future plans</small>
+						</a>
+						<ul style="z-index: 100000 !important;list-style: none;">
+							<li><a href="#r3">Product</a></li>
+							<li><a href="#Space">Application Space</a></li>
+							<li><a href="#Earth">Application Earth</a></li>
+						</ul>
+					</li>
+					<li style="background-color: unset;">
+						<div class="tangdouren" style="text-align: center;margin-top: 10px;">
+						  <a href="#" style="border-bottom: unset;"><img src="https://static.igem.wiki/teams/5210/logo-astronaut-2.png" alt="糖豆人" style="width: 242px;-webkit-filter: drop-shadow(4px 4px 5px rgba(0,0,0,0.5));filter: drop-shadow(4px 4px 5px rgba(0,0,0,0.5));"></a>
+						</div>
+						<div class="brother2"><img src="https://static.igem.wiki/teams/5210/logo/logo-5.png" alt="" width="35%" style="position:absolute;top:0px;left:40%;-webkit-filter: drop-shadow(4px 4px 5px rgba(0,0,0,0.5));filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.5));"></div>
+					</li>
+				</ul>
+			</nav>
+
+			<div id="page-content-wrapper" class="col-lg-9 ms-auto">
+
+				<!-- 1. Experiment -->
+				<div id="r1">
+					<div class="row my-5">
+						<div class="col-lg-12 boxcontainer reveal-on-scroll" data-aos="fade-up">
+							<h1>Experiment</h1>
+							<h2>1.Vibrio fischeri culture</h2>
+							<p>The 2216E medium was used to recover Vibrio fischeri lyophilized powder. The medium
+								inoculated with Vibrio fischeri was incubated at 22℃ for 48h, and the luminescence test
+								was carried out using a multifunctional microplate reader after observing the turbidity
+								of the medium and the blue fluorescence in the darkness with the naked eye.</p>
+							<div class="row mx-auto d-flex justify-content-center wi-lg-100"><img
+									src="https://static.igem.wiki/teams/5210/result-1.png" alt="Gut-sweeper"
+									style="width:100%;"></div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 1 |</strong><b> Vibrio fischeri successfully cultured
+								and fluoresced in the laboratory</b>
+							</figcaption>
+							A. 2216E Culture Media Formulation;<br>
+							B. Original camera shot luminescent Vibrio fisheri;<br>
+							C. Multifunctional microplate reader luminescence test.
+							<br><br>
+
+							<p>We successfully cultured Vibrio fischeri in the lab and observed bioluminescence.
+								However, because of the slow growth rate and the time required for luminescence, we did
+								not consider Vibrio fischeri to be suitable as our chassis bacteria, and its
+								luminescence principle inspired us to explore further.</p>
+
+
+
+							<h2>2.Envz-OmpR Validating of the Two-component osmotic pressure sensing system Envz-OmpR
+							</h2>
+							<p>Validation experiments were performed with BL21(DE3). LB medium with different NaCl
+								concentrations was prepared and reporter gene expression was observed.</p>
+							<div class="row mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/result-2.png" 
+									style="width:100%;">
+							</div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 1 |</strong>
+								<b> Fluorescence Intensity with Different osmotic pressure LB cocultured in Pompc-EGFP engineered bacteria</b>
+							</figcaption>
+							A. plasmid construction;<br>
+							B. pre-experiment to explore the suitable growth concentration of experimental bacterium BL21; <br>
+							C. fluorescence intensity of engineered bacteria under different osmotic pressures; <br>
+							D. Fluorescence microscope to observe the fluorescence intensity of engineered bacteria under different osmotic pressures.
+							<br><br>
+
+
+							<h2>3.Validating luminescence efficacy of Lux gene clusters</h2>
+							<p>The Lux gene cluster (LuxCDABE or LuxCDABEGF) was introduced into BL21 (DE3) and
+								expression was induced using IPTG. Bioluminescence was observed by naked eye and
+								photographed. After the obvious luminescence was observed by naked eyes, the
+								fluorescence intensity was quantified using a multifunctional microplate reader.</p>
+							<div class="row mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/result-3.png" style="width:100%;">
+							</div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 3 |</strong>
+								<b>Luminescence results of optimized luminescent gene circuits</b>
+							</figcaption>
+							A. Plasmid construction;<br>
+							B. Multifunctional microplate reader luminescence test;<br>
+							C. Original camera shot luminescent engineering bacteria; <br>
+							D. Exposure 15s shot luminescent engineering bacteria.
+							<br><br>
+							<p>Lux luminescent gene clusters emit blue fluorescence that is visible to the naked eye, however, it can only be observed in dark environments, and we would like to further enhance the intensity of the luminescence.</p>
+
+
+							<h2>4.Validating cold-tolerant module protein expression</h2>
+							<p>Plasmids containing proteins encoding SOD and Catalase were introduced into BL21 (DE3) and expression was induced using 0.5 mM and 0 mM IPTG, respectively, and SDS-PAGE was performed to verify protein expression.</p>
+							<div class="row mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/result-4.png" style="width:90%;">
+							</div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 4 |</strong>
+								<b>Prokaryotic expression of SOD and catalase proteins</b><br>
+							</figcaption>
+							A. Plasmid construction;<br>
+							B. SDS-PAGE image; <br>
+							C. SDS-PAGE strip analysis results.
+							<br><br>
+							<p>We successfully expressed two proteins, but the amount of expression was not ideal. In the future, we will further explore to optimize the expression and test the engineered bacteria for low temperature resistance.</p>
+
+
+
+							<h2>5.Preparation and recovery of lyophilized bacterial powder:</h2>
+							<p>BL21 (DE3) was lyophilized using liquid LB medium with 10% sucrose as a protective agent. After one week of lyophilization and preservation, the plates were resuscitated using liquid LB medium, diluted 3,000-fold, coated and cultured in microtiter plates. The coated plates and culture results were visualized.</p>
+							<div class="row mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/result-5.png" style="width:90%;">
+							</div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 5 |</strong>
+								<b>Results of preparation of lyophilized bacterial powders and resuscitation</b>
+							</figcaption>
+							A. Freeze-dried bacterial powder product;<br>
+							B. Diluted coated plate result after resuscitation; <br>
+							C. Visualization of coated plate result;<br>
+							D. Measurement of growth curve after resuscitation.
+							<br><br>
+
+
+
+							<h2>6.Verificating radiation resistance of RecO, RecF</h2>
+							<p>Plasmids containing genes encoding RecO and RecF were introduced into BL21 (DE3), diluted coated plates (agar plates containing IPTG) were irradiated with different doses of UV light, and surviving colonies were counted after 3 days of incubation. Protein expression was induced with 1 mM IPTG and SDS-PAGE was performed to verify protein expression.</p>
+							<div class="row mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/result-6.png" style="width:95%;">
+							</div>
+							<figcaption class="pt-3 ps-3">
+								<strong>Figure. 6 |</strong>
+								<b>Results of prokaryotic expression of RecO and RecF genes and validation of radiation resistance</b>
+							</figcaption>
+							A. Plasmid construction;<br>
+							B. Changes in the survival of bacteria after UV irradiation at different doses;<br>
+							C. SDS-PAGE image.
+							<br><br>
+							<p>We successfully expressed RecO and RecF proteins in BL21(DE3) and verified the survivability of the engineered bacteria with UV irradiation.</p>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- 2. Model -->
+				<div id="r2">
+					<div class="row my-5">
+						<div class="col-lg-12 boxcontainer reveal-on-scroll" data-aos="fade-up">
+							<h1>Model</h1>
+							<table class="model">
+								<tbody>
+									<tr style="font-size: 1.2rem;font-weight: bolder;background-color: #4bacc6;">
+										<th>Model</th>
+										<th>
+											<center>Method or Equation</center>
+										</th>
+										<th>Results</th>
+									</tr>
+									<!-- 第一个板块 -->
+									<tr>
+										<th colspan="3" style="background-color: #dbeef3;text-align: center;">Disaster Prediction Model (DPM)</th>
+									</tr>
+									<tr style="background-color: #FFFFFF;">
+										<td>ARIMA</td>
+										<td>
+											<div class="row mx-auto d-flex justify-content-center wi-lg-100">
+												<img src="https://static.igem.wiki/teams/5210/result-7.png" style="width:100%;">
+											</div>
+										</td>
+										<td>July is the time of high incidence of accidents every year. It was predicted that the next accidents would occur at around 0:00 at night.</td>
+									</tr>
+									<tr style="background-color: #FFFFFF;">
+										<td>Random Forest Regression Algorithm</td>
+										<td>Utilizing the relationship between historical time differences and geographical coordinates to separately predict the latitude and longitude of future accident locations</td>
+										<td>The distribution of latitudes and longitudes is relatively dispersed. Fitting effect: Latitude Model R²: 0.791, Longitude Model R²: 0.702.</td>
+									</tr>
+
+									<!-- 第二个板块 -->
+									<tr>
+										<th colspan="3" style="background-color: #dbeef3;text-align: center;">Luminous Life-Saving Model (LSM)</th>
+									</tr>
+									<tr style="background-color: #FFFFFF;">
+										<td>Population growth model</td>
+										<td style="text-align: center;">
+											Synechococcus:
+											<div class="row mx-auto d-flex justify-content-center wi-lg-100">
+												<img src="https://static.igem.wiki/teams/5210/result-8.png" style="width:100%;">
+											</div>
+											Vibrio natriegens:
+											<div class="row mx-auto d-flex justify-content-center wi-lg-100">
+												<img src="https://static.igem.wiki/teams/5210/result-9.png" style="width:100%;">
+											</div>
+										</td>
+										<td>Synechococcus enters the exponential growth phase after 10 hours and reaches the plateau phase around 40 hours; V. natriegens grows slowly in the first 30 hours, and the growth rate accelerates significantly after 40 hours.</td>
+									</tr>
+									<tr style="background-color: #FFFFFF;">
+										<td>Luminous line simulation</td>
+										<td>
+											<div class="row mx-auto d-flex justify-content-center wi-lg-100">
+												<img src="https://static.igem.wiki/teams/5210/result-10.png" style="width:100%;">
+											</div>
+										</td>
+										<td>The illuminance changes slightly in the first 20 hours, and then increases rapidly over time, reaching a peak of 1567 lx at 48.87h. As the number of V. natriegens and Synechococcus stabilizes, the illuminance remains at about 1000 lx. It is estimated that the maximum coverage radius can reach about 90 meters on the sea.</td>
+									</tr>
+									<tr style="background-color: #FFFFFF;">
+										<td>VeloVI model</td>
+										<td>It re-infers the RNA velocity through a model that shares information among all cells and genes, while learning kinetic parameters and latent time</td>
+										<td>Output the kinetic parameters such as transcription rate of the corresponding gene.</td>
+									</tr>
+									<tr style="background-color: #FFFFFF;">
+										<td>Sensitivity analysis</td>
+										<td>On the basis of the originally set luminous efficiency coefficient value (η) of 30%, it is adjusted up and down by 20% to simulate the effect of external regulatory factors (such as pH, temperature, etc.)</td>
+										<td>The model is robust and the overall trend remains unchanged. When the value of η is increased, the peak value of I is significantly improved, and the luminous effect decreases after 50 hours; when the value of η is decreased, the illumination intensity fluctuates less after reaching the peak value, which is superior in long-term rescue.</td>
+									</tr>
+									<tr style="background-color: #FFFFFF;">
+										<td>Genetic Algorithm</td>
+										<td>It consists of three basic operations: selection, crossover, and mutation. By simulating natural selection and genetic mechanisms, it searches for the optimal solution in the search space</td>
+										<td>The optimal illumination intensity (I) is 4582.49 lx, which is an increase of 192.4% compared to the initial state. This provides support for exploring the luminous potential of the system.</td>
+									</tr>
+
+									<!-- 第三个板块 -->
+									<tr>
+										<th colspan="3" style="background-color: #dbeef3;text-align: center;">Space Feasibility Analysis (SFA)</th>
+									</tr>
+									<tr style="background-color: #FFFFFF;">
+										<td>Rank-Sum Ratio (RSR) Comprehensive Evaluation Method</td>
+										<td>Collect and analyze data of various planets in the solar system from multiple angles. Obtain dimensionless statistical quantity RSR through rank transformation, and sort or grade the evaluation objects directly according to the RSR value, so as to make a comprehensive evaluation of the evaluation objects</td>
+										<td>The Bio-Beacon Rescue Locator is most suitable for application on Mars due to its small difference from the Earth's environment in terms of rotation period, water resources and other indicators.</td>
+									</tr>
+									<!-- 第四个板块 -->
+									<tr>
+										<th colspan="3" style="background-color: #dbeef3;text-align: center;">Molecular Docking Test of Repressor Protein</th>
+									</tr>
+									<tr style="background-color: #FFFFFF;">
+										<td>Molecular docking technique</td>
+										<td>The structure files of sucrose, corresponding protein and DNA were obtained by the tool, and 240ps molecular dynamics simulation was performed after the global docking of proteins, and the binding of proteins and DNA was analyzed before and after the simulation.</td>
+										<td>The affinity between repressor protein and DNA did not change significantly before and after sucrose treatment. Further analysis of the results showed that changes in binding mode enabled DNA exposure to be transcribed, demonstrating that repression could be inhibited after sucrose treatment.</td>
+									</tr>
+								</tbody>
+							</table>
+
+						</div>
+					</div>
+				</div>
+
+
+				<!-- 3. Product design and future plans -->
+				<div id="r3">
+					<div class="row my-5">
+						<div class="col-lg-12 boxcontainer reveal-on-scroll" data-aos="fade-up">
+							<h1>Product design and future plans</h1>
+							
+							<p>Based on the algal bacterial system, we have designed fluorescent positioning life jackets, parachutes and space suits to adapt to different application scenarios. </p>
+							<p>①Fluorescent positioning life jacket: In case of shipwreck or emergency, the fluorescent positioning life jacket can quickly respond to environmental changes, and the built-in freeze-dried bacterial powder package emits blue fluorescence when activated by water, significantly improving the rescue positioning efficiency and earning valuable survival time for those in distress. </p>
+							<p>②Fluorescent positioning parachute: When the aircraft or helicopter is forced to land on the sea for some reason, the biological coating integrated on the surface of the fluorescent positioning parachute can be activated and emit blue fluorescence after encountering water, providing accurate positioning for search and rescue operations.</p>
+							<p>③Ecological rescue spacesuit: When operating on the surface of a planet or performing a mission in the event of an accident, the ecological rescue spacesuit can emit bright fluorescent signals for search and rescue, while its miniature ecosystem can continue to provide astronauts with oxygen and nutrients needed for life, greatly extending the survival time of astronauts, adding a new dimension of safety to space exploration.</p>
+							<div class="row mx-auto d-flex justify-content-center wi-lg-100">
+								<img src="https://static.igem.wiki/teams/5210/result-product-1.png" style="width:50%;">
+							</div>
+							<br><br>
+
+							<p>In fact, LuminAid is used in a wide range of applications. Our initial aim was to apply this technology to spacesuits, so as to make up for some of the shortcomings of existing bionic lighting technology, reduce the energy dependence on the earth, and achieve in-situ and sustainable use of energy; It can also be equipped to the outside of the rescue chamber as a kind of identification mark. At the same time, the new technologies applied in space exploration can often feed back to the earth, providing new focus for the development of earth science and technology. We focused on tapping into the huge potential of LuminAid in terraforming and designed it to be equipped with life jackets, parachutes, and various rescue scenarios.</p>
+
+							<h2 id="Space">1. Space</h2>
+							<h3>(1)Spacesuit</h3>
+							<p>Deep space exploration missions, planetary surface surveys, long-term spacewalks: In deep space areas far away from Earth and communication signals may be interrupted, if astronauts encounter accidental loss of contact, LuminAid equipped on the spacesuit will become a rescue beacon for rescuers, providing emergency positioning functions.</p>
+							<div class="row mx-auto d-flex justify-content-center wi-lg-100"><img
+								src="https://static.igem.wiki/teams/5210/product-figure1-tihuan.jpeg" alt="Gut-sweeper"
+								style="width:50%;"></div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 1 |</strong><b> Equipped with a LuminAid-equipped spacesuit</b>
+							</figcaption>
+
+							<h3>(2)Space capsule</h3>
+							<p>Capsule Identification and Positioning: LuminAid can emit a large intensity of fluorescence without external energy supply, which can be used for the identification and positioning of the space capsule, which can save other energy.</p>
+							<div class="row mx-auto d-flex justify-content-center wi-lg-100"><img
+								src="https://static.igem.wiki/teams/5210/result-12.png" alt="Gut-sweeper"
+								style="width:50%;"></div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 2 |</strong><b> LuminAid for extracapsule equipment</b>
+							</figcaption>
+
+
+
+							<h2 id="Earth">2. Earth</h2>
+							<h3>(1)Life jacket</h3>
+							<p>Marine navigation and operations, water sports and leisure, and shipwreck rescue: For fishermen, seafarers and offshore oil exploration workers and other personnel who have been working at sea for a long time, surfing, windsurfing, kayaking and other water sports enthusiasts, and victims of shipwrecks such as ship sinking and people falling overboard, LuminAid equipped with life jackets can automatically emit fluorescent signals in an emergency to help search and rescue teams quickly locate them.</p>
+							<div class="row mx-auto d-flex justify-content-center wi-lg-100"><img
+								src="https://static.igem.wiki/teams/5210/result-13.png" alt="Gut-sweeper"
+								style="width:80%;"></div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 3 |</strong><b> Life jackets equipped with LuminAid</b>
+							</figcaption>
+
+							<h3>(2)Parachute</h3>
+							<p>Maritime Disaster Rescue: When an airplane or helicopter is forced to land on the sea surface for some reason, passengers and crew can use this parachute to escape urgently. The fluorescent effect of the parachute surface when it encounters water can quickly attract the attention of search and rescue personnel and shorten the rescue time.</p>
+							<div class="row mx-auto d-flex justify-content-center wi-lg-100"><img
+								src="https://static.igem.wiki/teams/5210/product-figure4-tihuan.jpeg" alt="Gut-sweeper"
+								style="width:80%;"></div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 4 |</strong>
+								<b>Equipped with a parachute of LuminAid</b>
+							</figcaption>
+
+							<h3>(3)Others</h3>
+							<p>In addition to this, our Luminaid algal system can be used in a number of scenarios: Polar research, mineral mining, deep-sea exploration, marine waste marking...</p>
+							<div class="row mx-auto d-flex justify-content-center wi-lg-100"><img
+								src="https://static.igem.wiki/teams/5210/result-15.png" alt="Gut-sweeper"
+								style="width:80%;"></div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 5 |</strong>
+								<b>Luminaid is used in the mining of mineral sources</b>
+							</figcaption>
+							<div class="row mx-auto d-flex justify-content-center wi-lg-100"><img
+								src="https://static.igem.wiki/teams/5210/result-16.png" alt="Gut-sweeper"
+								style="width:80%;"></div>
+							<figcaption class="pt-3 ps-3 text-center">
+								<strong>Figure. 6 |</strong>
+								<b>Use Luminaid in deep-sea expeditions</b>
+							</figcaption>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+
+	</div>
+
+{% endblock %}

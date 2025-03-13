@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+
+{% block title %}Notebook{% endblock %}
+{% block lead %}Document the dates you worked on your project. This should be a detailed account of the work done each
+day for your project.{% endblock %}
+
+{% block page_content %}
+	<div class="inner-banner inner-bg3 header-mask"
+		style="background: url(https://static.igem.wiki/teams/5210/photo/notebook.jpg) no-repeat center 0% fixed;width: 100%;background-size: cover;height: 94vh;">
+		<div class="container">
+			<div class="inner-title">
+				<h3>Notebook</h3>
+			</div>
+			<!----scroll icon------->
+			<div class="wrapper">
+				<div class="scroll-hint">
+					<p style="text-indent: unset;">Scroll To Explore</p>
+					<div class="icon-scroll">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container relative" style="max-width: 1300px">
+		<div id="references1" style="box-shadow: 0 6px 7px -2px rgba(0,0,0,0.5);">
+			<div class="row my-5" style="cursor: pointer">
+				<button class="btn d-flex justify-content-between accordion-general w-100" type="button"
+					data-bs-toggle="collapse" data-bs-target="#references-d1" aria-expanded="false"
+					aria-controls="references-d1" onclick="myFunction(this)">
+					<h1 class="accordion-general-label">1.Model</h1>
+					<div>
+						<div class="container">
+							<div class="bar1"></div>
+							<div class="bar2"></div>
+							<div class="bar3"></div>
+						</div>
+					</div>
+				</button>
+				<div class="collapse px-0" id="references-d1" style="margin-top: -10px;">
+					<div class="card card-body accordion-general-content px-5">
+						<iframe src="https://static.igem.wiki/teams/5210/pdf/notebook-model-zhong.pdf" frameborder="0"
+							width="95%" height="700px" noresize="noresize" style="margin:20px auto 5px;">
+						</iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="references2" style="box-shadow: 0 6px 7px -2px rgba(0,0,0,0.5);">
+			<div class="row my-5" style="cursor: pointer">
+				<button class="btn d-flex justify-content-between accordion-general w-100" type="button"
+					data-bs-toggle="collapse" data-bs-target="#references-d2" aria-expanded="false"
+					aria-controls="references-d2" onclick="myFunction(this)">
+					<h1 class="accordion-general-label">2.Human Practices</h1>
+					<div>
+						<div class="container">
+							<div class="bar1"></div>
+							<div class="bar2"></div>
+							<div class="bar3"></div>
+						</div>
+					</div>
+				</button>
+				<div class="collapse px-0" id="references-d2" style="margin-top: -10px;">
+					<div class="card card-body accordion-general-content px-5">
+						<iframe src="https://static.igem.wiki/teams/5210/pdf/hp-notebook.pdf" frameborder="0" width="95%"
+							height="700px" noresize="noresize" style="margin:20px auto 5px;">
+						</iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="references3" style="box-shadow: 0 6px 7px -2px rgba(0,0,0,0.5);">
+			<div class="row my-5" style="cursor: pointer">
+				<button class="btn d-flex justify-content-between accordion-general w-100" type="button"
+					data-bs-toggle="collapse" data-bs-target="#references-d3" aria-expanded="false"
+					aria-controls="references-d3" onclick="myFunction(this)">
+					<h1 class="accordion-general-label">3.Experiments</h1>
+					<div>
+						<div class="container">
+							<div class="bar1"></div>
+							<div class="bar2"></div>
+							<div class="bar3"></div>
+						</div>
+					</div>
+				</button>
+				<div class="collapse px-0" id="references-d3" style="margin-top: -10px;">
+					<div class="card card-body accordion-general-content px-5">
+						<iframe src="https://static.igem.wiki/teams/5210/pdf/notebook-2.pdf" frameborder="0" width="95%" height="700px" noresize="noresize"
+							style="margin:20px auto 5px;">
+						</iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+{% endblock %}

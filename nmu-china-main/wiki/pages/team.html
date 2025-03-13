@@ -1,0 +1,1388 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="https://static.igem.wiki/common/icons/favicons/igem-2022.svg" />
+	<link rel="license" href="https://creativecommons.org/licenses/by/4.0/" />
+
+	<link rel="shortcut icon" href="https://static.igem.wiki/teams/5210/background-2.svg">
+
+	<!-- Bootstrap CSS -->
+	<link href="{{ url_for('static', filename = 'bootstrap.min.css') }}" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link href="{{ url_for('static', filename = 'style.css') }}" rel="stylesheet">
+
+	<!-- Bootstrap CSS -->
+	<link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link href="static/css/style.css" rel="stylesheet">
+
+	<!-- NMU_China JavaScript -->
+	<script src="https://static.igem.wiki/teams/5210/nmu.js"></script>
+
+	<!-- Custom CSS -->
+	<link href="static/css/style-nmu.css" rel="stylesheet">
+
+	<link href="static/css/font-awesome.min.css" rel="stylesheet">
+
+	<title>Team | NMU-China - iGEM 2024</title>
+
+</head>
+
+<div id="se-pre-con" style="transition: all 2s linear;">
+	<div class="se-bg-img">
+		<img src="https://static.igem.wiki/teams/5210/logo/logo-4.jpg">
+	</div>
+
+	<div class="cs-loader">
+		<div class="cs-loader-inner">
+			<label>●</label>
+			<label>●</label>
+			<label>●</label>
+			<label>●</label>
+			<label>●</label>
+			<label>●</label>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+	window.onload = function () {
+		document.getElementById("se-pre-con").style.visibility = "hidden";
+		document.getElementById("se-pre-con").style.opacity = "0";
+	}
+</script>
+
+<body id="stuff" data-bs-spy="scroll" data-bs-target="#sidenav-wrapper" data-bs-offset="50">
+	<!-- Navigation -->
+	{% include 'menu.html' %}
+
+	<!-- Page Content -->
+
+	<div class="inner-banner inner-bg3 header-mask"
+		style="background: url(https://static.igem.wiki/teams/5210/photo/013.jpg) no-repeat center 0% fixed;width: 100%;background-size: cover;height: 94vh;padding: 0;">
+		<div class="container">
+			<div class="inner-title">
+				<h3>Meet our team !</h3>
+			</div>
+			<!----scroll icon------->
+			<div class="wrapper">
+				<div class="scroll-hint">
+					<p style="text-indent: unset;">Scroll To Explore</p>
+					<div class="icon-scroll">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- css -->
+	<style>
+		.cs-loader-inner {
+			padding: 0 !important;
+
+		}
+
+		body {
+			align-items: center;
+			/*overflow: auto;*/
+			height: 100vh;
+
+		}
+
+		body .options-1 {
+			display: flex;
+			text-align: center;
+
+			min-width: 850px;
+			/*如果添加option的话，你需要调整这个值来调整展开的图片的宽度*/
+
+			height: 400px;
+		}
+
+
+		body .options-1 .option-1 {
+			position: relative;
+			overflow: hidden;
+			min-width: 60px;
+			max-width: 60px;
+			margin: 10px;
+			background: var(--optionBackground, var(--defaultBackground, #E6E9ED));
+			background-size: auto 100%;
+			/*这个值可以调整折叠和展开的图片的大小*/
+			background-position: center;
+			cursor: pointer;
+			transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+		}
+
+		body .options-1 .option-1:nth-child(1) {
+			--defaultBackground: #ED5565;
+		}
+
+		body .options-1 .option-1:nth-child(2) {
+			--defaultBackground: #FC6E51;
+		}
+
+		body .options-1 .option-1:nth-child(3) {
+			--defaultBackground: #FFCE54;
+		}
+
+		body .options-1 .option-1:nth-child(4) {
+			--defaultBackground: #2ECC71;
+		}
+
+		body .options-1 .option-1:nth-child(5) {
+			--defaultBackground: #5D9CEC;
+		}
+
+		body .options-1 .option-1:nth-child(6) {
+			--defaultBackground: #AC92EC;
+		}
+
+		body .options-1 .option-1.active {
+			flex-grow: 10000;
+			transform: scale(1);
+			max-width: 300px;
+			min-width: 300px;
+			margin: 10px;
+			border-radius: 40px;
+			background-size: auto 100%;
+		}
+
+		body .options-1 .option-1.active .shadow {
+			box-shadow: inset 0 -120px 120px -120px black, inset 0 -120px 120px -100px black !important;
+		}
+
+		body .options-1 .option-1.active .label {
+			bottom: 20px;
+			left: 20px;
+		}
+
+		body .options-1 .option-1.active .label .info>div {
+			left: 0px;
+			opacity: 1;
+		}
+
+		body .options-1 .option-1:not(.active) {
+			flex-grow: 1;
+			border-radius: 30px;
+		}
+
+		body .options-1 .option-1:not(.active) .shadow {
+			bottom: -40px;
+			box-shadow: inset 0 -120px 0px -120px black, inset 0 -120px 0px -100px black;
+		}
+
+		body .options-1 .option-1:not(.active) .label {
+			bottom: 10px;
+			left: 10px;
+		}
+
+		body .options-1 .option-1:not(.active) .label .info>div {
+			left: 20px;
+			opacity: 0;
+		}
+
+		body .options-1 .option-1 .shadow {
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+			height: 120px;
+			transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+		}
+
+		body .options-1 .option-1 .label {
+			display: flex;
+			position: absolute;
+			right: 0px;
+			height: 40px;
+			transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+		}
+
+		body .options-1 .option-1 .label .icon {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			min-width: 40px;
+			max-width: 40px;
+			height: 40px;
+			border-radius: 100%;
+			background-color: white;
+			color: var(--defaultBackground);
+		}
+
+		body .options-1 .option-1 .label .info {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			margin-left: 10px;
+			color: white;
+			white-space: pre;
+		}
+
+		body .options-1 .option-1 .label .info>div {
+			position: relative;
+			transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity 0.5s ease-out;
+		}
+
+		body .options-1 .option-1 .label .info .main {
+			font-weight: bold;
+			font-size: 1.2rem;
+		}
+
+		body .options-1 .option-1 .label .info .sub {
+			transition-delay: 0.1s;
+		}
+
+		body .options-2 {
+			display: flex;
+			text-align: center;
+
+			min-width: 850px;
+			/*如果添加option的话，你需要调整这个值来调整展开的图片的宽度*/
+
+			height: 500px;
+		}
+
+		body .options-2 .option-2 {
+			position: relative;
+			overflow: hidden;
+			min-width: 60px;
+			max-width: 60px;
+			margin: 10px 15px;
+			background: var(--optionBackground, var(--defaultBackground, #E6E9ED));
+			background-size: auto 100%;
+			/*这个值可以调整折叠和展开的图片的大小*/
+			background-position: 60%;
+			/*照片对不齐的用active和原本option里的background-position：50%这样子来调*/
+			/*如果有个体差异的话在每个option的格子里面微调每个人*/
+			cursor: pointer;
+			transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+		}
+
+		body .options-2 .option-2:nth-child(1) {
+			--defaultBackground: #ED5565;
+		}
+
+		body .options-2 .option-2:nth-child(2) {
+			--defaultBackground: #FC6E51;
+		}
+
+		body .options-2 .option-2:nth-child(3) {
+			--defaultBackground: #FFCE54;
+		}
+
+		body .options-2 .option-2:nth-child(4) {
+			--defaultBackground: #2ECC71;
+		}
+
+		body .options-2 .option-2:nth-child(5) {
+			--defaultBackground: #428ced;
+		}
+
+		body .options-2 .option-2:nth-child(6) {
+			--defaultBackground: #AC92EC;
+		}
+
+		body .options-2 .option-2:nth-child(7) {
+			--defaultBackground: #6a30fe;
+		}
+
+		body .options-2 .option-2:nth-child(8) {
+			--defaultBackground: #FF3EFF;
+		}
+
+		body .options-2 .option-2.active {
+			flex-grow: 10000;
+			transform: scale(1);
+			max-width: 300px;
+			min-width: 300px;
+			margin: 10px;
+			border-radius: 40px;
+			background-size: auto 100%;
+			background-position: center;
+			/*照片对不齐的用active和原本option里的background-position：50%这样子来调*/
+			/*&:active {
+      transform:scale(0.9);
+    }*/
+		}
+
+		body .options-2 .option-2.active .shadow {
+			box-shadow: inset 0 -120px 120px -120px black, inset 0 -120px 120px -100px black !important;
+		}
+
+		body .options-2 .option-2.active .label {
+			bottom: 20px;
+			left: 20px;
+		}
+
+		body .options-2 .option-2.active .label .info>div {
+			left: 0px;
+			opacity: 1;
+		}
+
+		body .options-2 .option-2:not(.active) {
+			flex-grow: 1;
+			border-radius: 30px;
+		}
+
+		body .options-2 .option-2:not(.active) .shadow {
+			bottom: -40px;
+			box-shadow: inset 0 -120px 0px -120px black, inset 0 -120px 0px -100px black;
+		}
+
+		body .options-2 .option-2:not(.active) .label {
+			bottom: 10px;
+			left: 10px;
+		}
+
+		body .options-2 .option-2:not(.active) .label .info>div {
+			left: 20px;
+			opacity: 0;
+		}
+
+		body .options-2 .option-2 .shadow {
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+			height: 120px;
+			transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+		}
+
+		body .options-2 .option-2 .label {
+			display: flex;
+			position: absolute;
+			right: 0px;
+			height: 40px;
+			transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+		}
+
+		body .options-2 .option-2 .label .icon {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			min-width: 40px;
+			max-width: 40px;
+			height: 40px;
+			border-radius: 100%;
+			background-color: white;
+			color: var(--defaultBackground);
+		}
+
+		body .options-2 .option-2 .label .info {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			margin-left: 10px;
+			color: white;
+			white-space: pre;
+		}
+
+		body .options-2 .option-2 .label .info>div {
+			position: relative;
+			transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity 0.5s ease-out;
+		}
+
+		body .options-2 .option-2 .label .info .main {
+			font-weight: bold;
+			font-size: 1.2rem;
+		}
+
+		body .options-2 .option-2 .label .info .sub {
+			transition-delay: 0.1s;
+		}
+
+		body .options-3 {
+			display: flex;
+			text-align: center;
+
+			min-width: 850px;
+			/*如果添加option的话，你需要调整这个值来调整展开的图片的宽度*/
+
+			height: 500px;
+		}
+
+		body .options-3 .option-3 {
+			position: relative;
+			overflow: hidden;
+			min-width: 60px;
+			max-width: 60px;
+			margin: 10px 15px;
+			background: var(--optionBackground, var(--defaultBackground, #E6E9ED));
+			background-size: auto 110%;
+			/*这个值可以调整折叠和展开的图片的大小*/
+
+			background-position: 60%;
+			cursor: pointer;
+			transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+		}
+
+		body .options-3 .option-3:nth-child(1) {
+			--defaultBackground: #FF0000;
+		}
+
+		body .options-3 .option-3:nth-child(2) {
+			--defaultBackground: #FF5511;
+		}
+
+		body .options-3 .option-3:nth-child(3) {
+			--defaultBackground: #FFCE54;
+		}
+
+		body .options-3 .option-3:nth-child(4) {
+			--defaultBackground: #EEEE00;
+		}
+
+		body .options-3 .option-3:nth-child(5) {
+			--defaultBackground: #00FF00;
+		}
+
+		body .options-3 .option-3:nth-child(6) {
+			--defaultBackground: #00FFCC;
+		}
+
+		body .options-3 .option-3:nth-child(7) {
+			--defaultBackground: #0066FF;
+		}
+
+		body .options-3 .option-3:nth-child(8) {
+			--defaultBackground: #7700FF;
+		}
+
+		body .options-3 .option-3:nth-child(9) {
+			--defaultBackground: #FF00FF;
+		}
+
+		body .options-3 .option-3.active {
+			flex-grow: 10000;
+			transform: scale(1);
+			max-width: 300px;
+			min-width: 300px;
+			margin: 10px;
+			border-radius: 40px;
+			background-size: auto 100%;
+			background-position: center;
+			/*&:active {
+      transform:scale(0.9);
+    }*/
+		}
+
+		body .options-3 .option-3.active .shadow {
+			box-shadow: inset 0 -120px 120px -120px black, inset 0 -120px 120px -100px black !important;
+		}
+
+		body .options-3 .option-3.active .label {
+			bottom: 20px;
+			left: 20px;
+		}
+
+		body .options-3 .option-3.active .label .info>div {
+			left: 0px;
+			opacity: 1;
+		}
+
+		body .options-3 .option-3:not(.active) {
+			flex-grow: 1;
+			border-radius: 30px;
+		}
+
+		body .options-3 .option-3:not(.active) .shadow {
+			bottom: -40px;
+			box-shadow: inset 0 -120px 0px -120px black, inset 0 -120px 0px -100px black;
+		}
+
+		body .options-3 .option-3:not(.active) .label {
+			bottom: 10px;
+			left: 10px;
+		}
+
+		body .options-3 .option-3:not(.active) .label .info>div {
+			left: 20px;
+			opacity: 0;
+		}
+
+		body .options-3 .option-3 .shadow {
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+			height: 120px;
+			transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+		}
+
+		body .options-3 .option-3 .label {
+			display: flex;
+			position: absolute;
+			right: 0px;
+			height: 40px;
+			transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+		}
+
+		body .options-3 .option-3 .label .icon {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			min-width: 40px;
+			max-width: 40px;
+			height: 40px;
+			border-radius: 100%;
+			background-color: white;
+			color: var(--defaultBackground);
+		}
+
+		body .options-3 .option-3 .label .info {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			margin-left: 10px;
+			color: white;
+			white-space: pre;
+		}
+
+		body .options-3 .option-3 .label .info>div {
+			position: relative;
+			transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity 0.5s ease-out;
+		}
+
+		body .options-3 .option-3 .label .info .main {
+			font-weight: bold;
+			font-size: 1.2rem;
+		}
+
+		body .options-3 .option-3 .label .info .sub {
+			transition-delay: 0.1s;
+		}
+
+
+
+		/*  body .options-2:before {
+    content: "";
+    width: 60px;
+    height: 500px;
+    background: url(https://static.igem.wiki/teams/4656/wiki/test-nanren.jpeg);
+    background-size: cover;
+    }
+    body .options-2:after {
+    content: "";
+    width: 60px;
+    height: 500px;
+    background: url(https://static.igem.wiki/teams/4656/wiki/test-nanren.jpeg);
+    background-size: cover;
+    }
+
+    body .options-3:before {
+    content: "";
+    width: 60px;
+    height: 500px;
+    background: url(https://static.igem.wiki/teams/4656/wiki/test-nanren.jpeg);
+    background-size: cover;
+    }
+    body .options-3:after {
+    content: "";
+    width: 60px;
+    height: 500px;
+    background: url(https://static.igem.wiki/teams/4656/wiki/test-nanren.jpeg);
+    background-size: cover;
+    } */
+
+
+
+
+
+
+
+
+
+		.carousel-1 {
+			display: block;
+			font-size: 0;
+			border-radius: 8px;
+			padding: 8px;
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+			background: white;
+			transform: translateZ(0);
+			height: 500px;
+			-webkit-overflow-scrolling: touch;
+			/* for tablets */
+		}
+
+		.touch .carousel-1 {
+			overflow: auto;
+		}
+
+		.carousel-1[data-at*=left]>.wrap::before {
+			opacity: 1;
+			text-indent: -50px;
+		}
+
+		.carousel-1[data-at*=right]>.wrap::after {
+			opacity: 1;
+			text-indent: -50px;
+		}
+
+		.carousel-1::after {
+			content: "";
+			pointer-events: none;
+			position: absolute;
+			z-index: 4;
+			bottom: -4px;
+			left: 0;
+			background: #027efb;
+			height: 4px;
+			border-radius: 4px;
+			opacity: 0;
+			width: var(--scrollWidth, 0);
+			left: var(--scrollLleft, 0);
+			transition: opacity 0.2s, bottom 0.2s;
+		}
+
+		.carousel-1:hover::after {
+			opacity: 1;
+			bottom: -10px;
+		}
+
+		.carousel-1>.wrap {
+			overflow: hidden;
+			border-radius: 4px;
+		}
+
+		.carousel-1>.wrap::before,
+		.carousel-1>.wrap::after {
+			content: "‹";
+			opacity: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			z-index: 2;
+			width: 50px;
+			font-size: 80px;
+			text-indent: -30px;
+			line-height: 500px;
+			font-family: monospace;
+			color: #555;
+			font-weight: bold;
+			border-radius: 8px;
+			pointer-events: none;
+			transition: 0.2s ease-out;
+			background: linear-gradient(to right, white 20%, transparent);
+		}
+
+		*,
+		::after,
+		::before {
+			box-sizing: unset;
+		}
+
+		.carousel-1>.wrap::after {
+			transform: rotate(180deg);
+			left: auto;
+			right: 0;
+		}
+
+		.carousel-1>.wrap>ul {
+			list-style: none;
+			white-space: nowrap;
+			height: 500px;
+		}
+
+		.carousel-1>.wrap>ul>li {
+			display: inline-block;
+			vertical-align: middle;
+			height: 100%;
+			margin: 0 0 0 5px;
+			position: relative;
+			overflow: hidden;
+			transition: 0.25s ease-out;
+		}
+
+		.carousel-1>.wrap>ul>li:first-child {
+			margin: 0;
+		}
+
+		.carousel-1>.wrap>ul>li>img {
+			display: block;
+			height: 100%;
+			margin: auto;
+			vertical-align: bottom;
+			position: relative;
+			z-index: 1;
+			transition: 1s ease;
+		}
+
+
+		.carousel-1 {
+
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			width: 88%;
+
+
+			margin: auto;
+		}
+
+
+
+
+
+		.overlay {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 100%;
+			width: 100%;
+			opacity: 0;
+			transition: .5s ease;
+			background-color: #ff853e;
+		}
+
+		.active:hover .overlay {
+			opacity: 0.8;
+		}
+
+
+		.textkkk {
+			color: white;
+			font-size: 20px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			text-align: center;
+			opacity: 0;
+			transition: .5s ease;
+			width: 100%;
+		}
+
+		.active:hover .textkkk {
+			opacity: 1;
+		}
+	</style>
+
+	<script>
+		window.console = window.console || function (t) { };
+	</script>
+
+	<!-- 主体内容1 -->
+	<div class="carousel-1" data-at="left right"
+		style="--scrollWidth: 53.92156862745098%; --scrollLleft: 17.31431966726084%;margin-top: 20px;">
+		<div class="wrap" style="scroll-behavior: auto;">
+			<ul style="padding: 0;">
+				<li> <img src="https://static.igem.wiki/teams/5210/photo/014.jpg"></li>
+				<li> <img src="https://static.igem.wiki/teams/5210/photo/016.jpg"></li>
+				<li> <img src="https://static.igem.wiki/teams/5210/photo/017.jpg"></li>
+				<li> <img src="https://static.igem.wiki/teams/5210/photo/021.jpg"></li>
+				<li> <img src="https://static.igem.wiki/teams/5210/photo/019.jpg"></li>
+				<li> <img src="https://static.igem.wiki/teams/5210/photo/8611.jpg"></li>
+				<li> <img src="https://static.igem.wiki/teams/5210/photo/team-tibu.jpg"></li>
+				<li> <img src="https://static.igem.wiki/teams/5210/photo/020.jpg"></li>
+			</ul>
+		</div>
+	</div>
+
+
+	<!-- 主体内容2 -->
+	<div class="container relative">
+
+		<!-- 人物1 -->
+		<div class="boxcontainer" style="margin-top: 20px;overflow: scroll;">
+			<h1 style="display:flow-root;">Our Wet lab Group!</h1>
+			<div class="options-1" style="overflow: scroll;">
+				<div class="option-1 active"
+					style="--optionBackground:url(https://static.igem.wiki/teams/5210/photo/010.jpg);background-repeat: no-repeat;">
+					<div class="shadow"></div>
+					<div class="label">
+						<div class="icon">
+							<i class="fa fa-heartbeat"></i>
+						</div>
+						<div class="info" style="margin-left: 35px;">
+							<div class="main">Yike Zhang</div>
+							<div class="sub">Clinical Medicine</div>
+						</div>
+					</div>
+					<div class="overlay"></div>
+					<div class="textkkk">Do not go gentle into that good night, Old age should burn and rave at close of
+						day. Rage, Rage against the dying light.</div>
+				</div>
+				<div class="option-1 active"
+					style="--optionBackground:url(https://static.igem.wiki/teams/5210/photo/20240929195335.jpg );background-repeat: no-repeat;">
+					<div class="shadow"></div>
+					<div class="label">
+						<div class="icon">
+							<i class="fa fa-medkit"></i>
+						</div>
+						<div class="info" style="margin-left: 35px;">
+							<div class="main">Xuanrong Liu</div>
+							<div class="sub">Medical imaging</div>
+						</div>
+					</div>
+					<div class="overlay"></div>
+					<div class="textkkk">Stay foolish,stay hungry.The best preparation for tomorrow is doing your best
+						today！</div>
+				</div>
+				<div class="option-1 active"
+					style="--optionBackground:url(https://static.igem.wiki/teams/5210/photo/002.jpg);background-repeat: no-repeat;">
+					<div class="shadow"></div>
+					<div class="label">
+						<div class="icon">
+							<i class="fa fa-cubes"></i>
+						</div>
+						<div class="info" style="margin-left: 35px;">
+							<div class="main">Bufan Ying</div>
+							<div class="sub">Medical imaging</div>
+						</div>
+					</div>
+					<div class="overlay"></div>
+					<div class="textkkk" style="width: 100%;">Choosing solitude, I won't shed a tear, no matter how much pain I endure, I
+						refuse to yield. Perhaps tomorrow, in a fleeting moment, I'll fulfill my promise, scars and all;
+						and on that very day, I'll show the world as well as tell myself, that I haven't disappointed
+						this night, just like the night sky with only one shining star.</div>
+				</div>
+				<div class="option-1 active"
+					style="--optionBackground:url(https://static.igem.wiki/teams/5210/photo/003.jpg);background-repeat: no-repeat;">
+					<div class="shadow"></div>
+					<div class="label">
+						<div class="icon">
+							<i class="fa fa-stethoscope"></i>
+						</div>
+						<div class="info" style="margin-left: 35px;">
+							<div class="main">Yitian Zhou</div>
+							<div class="sub">Clinical Medicine</div>
+						</div>
+					</div>
+					<div class="overlay"></div>
+					<div class="textkkk" style="width: 100%;">No difficulty can discourage, no obstacle dismay, no trouble dishearten the man
+						who has acquired the art of being alive. Difficulties are but dares of fate, obstacles but
+						hurdles to try his skill, troubles but bitter tonics to give him strength; and he rises higher
+						and looms greater after each encounter with adversity.
+					</div>
+				</div>
+				<div class="option-1 active"
+					style="--optionBackground:url(https://static.igem.wiki/teams/5210/photo/20240929195342.jpg);background-repeat: no-repeat;">
+					<div class="shadow"></div>
+					<div class="label">
+						<div class="icon">
+							<i class="fa fa-leaf"></i>
+						</div>
+						<div class="info" style="margin-left: 35px;">
+							<div class="main">Mengcan Sun</div>
+							<div class="sub">Clinical Medicine</div>
+						</div>
+					</div>
+					<div class="overlay"></div>
+					<div class="textkkk">Per aspera ad astra.</div>
+				</div>
+				<div class="option-1 active"
+					style="--optionBackground:url(https://static.igem.wiki/teams/5210/photo/015.jpg);background-repeat: no-repeat;">
+					<div class="shadow"></div>
+					<div class="label">
+						<div class="icon">
+							<i class="fa fa-angellist"></i>
+						</div>
+						<div class="info" style="margin-left: 35px;">
+							<div class="main">Zhangdong Liu</div>
+							<div class="sub">Clinical Medicine</div>
+						</div>
+					</div>
+					<div class="overlay"></div>
+					<div class="textkkk">Let nature take its course! Relax and take it easy!</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- 人物2 -->
+		<div class="boxcontainer" style="margin-top: 20px;overflow: scroll;">
+			<h1 style="display:flow-root;">Our Dry lab Group!</h1>
+			<div class="options-1" style="overflow: scroll;">
+				<div class="option-1 active"
+					style="--optionBackground:url(https://static.igem.wiki/teams/5210/photo/004.jpg);background-repeat: no-repeat;">
+					<div class="shadow"></div>
+					<div class="label">
+						<div class="icon">
+							<i class="fa fa-anchor"></i>
+						</div>
+						<div class="info" style="margin-left: 35px;">
+							<div class="main">Yanyu Huang</div>
+							<div class="sub">Traditional Chinese Medicine</div>
+						</div>
+					</div>
+					<div class="overlay"></div>
+					<div class="textkkk" style="width: 95%;">INFJ, will always be moved by idealists, likes to watch
+						table tennis matches, and wants to say "Thank you, all the athletes, for actively serving."
+					</div>
+
+				</div>
+				<div class="option-1 active"
+					style="--optionBackground:url(https://static.igem.wiki/teams/5210/photo/20240929195347.jpg);background-repeat: no-repeat;">
+					<div class="shadow"></div>
+					<div class="label">
+						<div class="icon">
+							<i class="fa fa-vcard"></i>
+						</div>
+						<div class="info" style="margin-left: 35px;">
+							<div class="main">Xinyu Shen</div>
+							<div class="sub">Anesthesia</div>
+						</div>
+					</div>
+					<div class="overlay"></div>
+					<div class="textkkk">To strive, to thrive.</div>
+				</div>
+				<div class="option-1 active"
+					style="--optionBackground:url(https://static.igem.wiki/teams/5210/photo/011.jpg);background-repeat: no-repeat;">
+					<div class="shadow"></div>
+					<div class="label">
+						<div class="icon">
+							<i class="fa fa-wpexplorer"></i>
+						</div>
+						<div class="info" style="margin-left: 35px;">
+							<div class="main">Ruitong Liu</div>
+							<div class="sub">Anesthesia</div>
+						</div>
+					</div>
+					<div class="overlay"></div>
+					<div class="textkkk">Do the right thing. It will gratify some people and astonish the rest</div>
+				</div>
+				<div class="option-1 active"
+					style="--optionBackground:url(https://static.igem.wiki/teams/5210/photo/20240929195408.jpg);background-repeat: no-repeat;">
+					<div class="shadow"></div>
+					<div class="label">
+						<div class="icon">
+							<i class="fa fa-grav"></i>
+						</div>
+						<div class="info">
+							<div class="main">Yukai Cheng</div>
+							<div class="sub">Clinical Medicine</div>
+						</div>
+					</div>
+					<div class="overlay"></div>
+					<div class="textkkk">The only direction in life that matters is forward. Always ready to embrace the
+						unknown ahead, with a peaceful and hopeful heart.</div>
+				</div>
+				<div class="option-1 active"
+					style="--optionBackground:url(https://static.igem.wiki/teams/5210/photo/008.jpg);background-repeat: no-repeat;">
+					<div class="shadow"></div>
+					<div class="label">
+						<div class="icon">
+							<i class="fa fa-diamond"></i>
+						</div>
+						<div class="info">
+							<div class="main">Yinuo Zhang</div>
+							<div class="sub">medical imaging</div>
+						</div>
+					</div>
+					<div class="overlay"></div>
+					<div class="textkkk">Correct attitude, optimize efficiency. The most beautiful sunrise is actually
+						the hope that rises in the heart. Don't be swayed by the sight of others, be sure to go on
+						unswervingly.</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<!-- 人物3 -->
+		<div class="boxcontainer" style="margin-top: 20px;overflow: scroll;">
+			<h1 style="display:flow-root;">Our Visualization Group!</h1>
+			<div class="options-1" style="overflow: scroll;">
+				<div class="option-1 active"
+					style="--optionBackground:url(https://static.igem.wiki/teams/5210/photo/009.jpg);background-repeat: no-repeat;">
+					<div class="shadow"></div>
+					<div class="label">
+						<div class="icon">
+							<i class="fa fa-anchor"></i>
+						</div>
+						<div class="info" style="margin-left: 35px;">
+							<div class="main">Chencan Fang</div>
+							<div class="sub">Clinical Medicine</div>
+						</div>
+					</div>
+					<div class="overlay"></div>
+					<div class="textkkk" style="width: 95%;">An optimist at heart, I savor the art of calligraphy,
+						classical architecture's beauty, and love hitting the tennis court. May each day bring forth its
+						share of luck and joy, as I embrace life with an unwavering optimism.</div>
+
+				</div>
+				<div class="option-1 active"
+					style="--optionBackground:url(https://static.igem.wiki/teams/5210/photo/005.jpg);background-repeat: no-repeat;">
+					<div class="shadow"></div>
+					<div class="label">
+						<div class="icon">
+							<i class="fa fa-vcard"></i>
+						</div>
+						<div class="info" style="margin-left: 35px;">
+							<div class="main">Jiatong Li</div>
+							<div class="sub">Clinical Medicine</div>
+						</div>
+					</div>
+					<div class="overlay"></div>
+					<div class="textkkk">Always believe that something wonderful is about to happen</div>
+				</div>
+				<div class="option-1 active"
+					style="--optionBackground:url(https://static.igem.wiki/teams/5210/photo/012.jpg);background-repeat: no-repeat;">
+					<div class="shadow"></div>
+					<div class="label">
+						<div class="icon">
+							<i class="fa fa-wpexplorer"></i>
+						</div>
+						<div class="info" style="margin-left: 35px;">
+							<div class="main">Xinyue Yu</div>
+							<div class="sub">Anesthesia</div>
+						</div>
+					</div>
+					<div class="overlay"></div>
+					<div class="textkkk">You know, people fall in love with sunsets when they are sad.</div>
+				</div>
+				<div class="option-1 active"
+					style="--optionBackground:url(https://static.igem.wiki/teams/5210/photo/20240929195353.jpg);background-repeat: no-repeat;">
+					<div class="shadow"></div>
+					<div class="label">
+						<div class="icon">
+							<i class="fa fa-grav"></i>
+						</div>
+						<div class="info">
+							<div class="main">Xinyue Yang</div>
+							<div class="sub">Clinical Medicine</div>
+						</div>
+					</div>
+					<div class="overlay"></div>
+					<div class="textkkk">Nurture the righteous spirit of heaven and earth; emulate the perfect people
+						from past to present.</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<!-- 人物4 -->
+		<div class="boxcontainer" style="margin-top: 20px;overflow: scroll;">
+			<h1 style="display:flow-root;">Our College Partnership!</h1>
+			<div class="options-1" style="overflow: scroll;">
+				<div class="option-1 active"
+					style="--optionBackground:url(https://static.igem.wiki/teams/5210/photo/20240929195533.jpg);background-repeat: no-repeat;">
+					<div class="shadow"></div>
+					<div class="label">
+						<div class="icon">
+							<i class="fa fa-anchor"></i>
+						</div>
+						<div class="info" style="margin-left: 35px;">
+							<div class="main">Anqi Hu</div>
+							<div class="sub">Clinical Medicine</div>
+						</div>
+					</div>
+					<div class="overlay"></div>
+					<div class="textkkk" style="width: 95%;">Not let any nut shells or mosquito wings that fall on the
+						rails throw us off the track.</div>
+
+				</div>
+				<div class="option-1 active"
+					style="--optionBackground:url(https://static.igem.wiki/teams/5210/photo/2024-09-29-200329.jpg);background-repeat: no-repeat;">
+					<div class="shadow"></div>
+					<div class="label">
+						<div class="icon">
+							<i class="fa fa-vcard"></i>
+						</div>
+						<div class="info" style="margin-left: 35px;">
+							<div class="main">Ruhan Li</div>
+							<div class="sub">Clinical Medicine</div>
+						</div>
+					</div>
+					<div class="overlay"></div>
+					<div class="textkkk">Hungry and humble.</div>
+				</div>
+				<div class="option-1 active"
+					style="--optionBackground:url(https://static.igem.wiki/teams/5210/photo/2024-09-29-195938.jpg);background-repeat: no-repeat;">
+					<div class="shadow"></div>
+					<div class="label">
+						<div class="icon">
+							<i class="fa fa-wpexplorer"></i>
+						</div>
+						<div class="info" style="margin-left: 35px;">
+							<div class="main">Zihan Ding</div>
+							<div class="sub">High school student</div>
+						</div>
+					</div>
+					<div class="overlay"></div>
+					<div class="textkkk">Hello,world.</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<!--老师5 -->
+		<div class="boxcontainer" style="margin-top: 20px;overflow: scroll;">
+			<h1 style="display:flow-root;">Our Principal Investigators!</h1>
+			<div class="options-1" style="overflow: scroll;">
+				<div class="option-1 active"
+					style="--optionBackground:url(https://static.igem.wiki/teams/5210/photo/yzx8527a.jpg);background-repeat: no-repeat;">
+					<div class="shadow"></div>
+					<div class="label">
+						<div class="icon">
+							<i class="fa fa-briefcase"></i>
+						</div>
+						<div class="info" style="margin-left: 20px;">
+							<div class="main">Changhai Lei</div>
+							<div class="sub">Principal Investigator</div>
+						</div>
+					</div>
+				</div>
+				<div class="option-1 active"
+					style="--optionBackground:url(https://static.igem.wiki/teams/5210/photo/yzx8525a.jpg);background-repeat: no-repeat;">
+					<div class="shadow"></div>
+					<div class="label">
+						<div class="icon">
+							<i class="fa fa-heartbeat"></i>
+						</div>
+						<div class="info" style="margin-left: 15px;">
+							<div class="main">Shi Hu</div>
+							<div class="sub">Principal Investigator</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="option-1 active"
+					style="--optionBackground:url(https://static.igem.wiki/teams/5210/photo/yzx8523a.jpg);background-repeat: no-repeat;">
+					<div class="shadow"></div>
+					<div class="label">
+						<div class="icon">
+							<i class="fa fa-tree"></i>
+						</div>
+						<div class="info" style="margin-left: 0px;">
+							<div class="main" style="margin-left: -25px;">Ruixue Mao</div>
+							<div class="sub">Secondary Principal Investigator</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="option-1 active"
+					style="--optionBackground:url(https://static.igem.wiki/teams/5210/photo/wenyan-fu.jpg);background-repeat: no-repeat;">
+					<div class="shadow"></div>
+					<div class="label">
+						<div class="icon">
+							<i class="fa fa-tree"></i>
+						</div>
+						<div class="info" style="margin-left: 0px;">
+							<div class="main" style="margin-left: -25px;">Wenyan Fu</div>
+							<div class="sub">Secondary Principal Investigator</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="option-1 active"
+					style="--optionBackground:url(https://static.igem.wiki/teams/5210/photo/007.jpg);background-repeat: no-repeat;">
+					<div class="shadow"></div>
+					<div class="label">
+						<div class="icon">
+							<i class="fa fa-tint"></i>
+						</div>
+						<div class="info" style="margin-left: 50px;">
+							<div class="main">Fangxing Lin</div>
+							<div class="sub">Instructor</div>
+						</div>
+					</div>
+				</div>
+				<!--瞿宇钧-->
+				<div class="option-1 active"
+					style="--optionBackground:url(https://static.igem.wiki/teams/5210/photo/yzx8599a.jpg);background-repeat: no-repeat;">
+					<div class="shadow"></div>
+					<div class="label">
+						<div class="icon">
+							<i class="fa fa-tint"></i>
+						</div>
+						<div class="info" style="margin-left: 50px;">
+							<div class="main">Yujun Qu</div>
+							<div class="sub">Advisor</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+
+	</div>
+
+
+
+	<!-- jQuery development version -->
+	<script src="https://static.igem.wiki/teams/5210/jquery-3-6-0.js"></script>
+
+
+	<!-- 禁用options-1 -->
+	<!---<script id="rendered-js">
+  $(".option-1").click(function () {
+  $(".option-1").removeClass("active");
+  $(this).addClass("active");
+
+  });
+  //# sourceURL=pen.js
+  </script>-->
+
+	<script id="rendered-js">
+		$(".option-2").click(function () {
+			$(".option-2").removeClass("active");
+			$(this).addClass("active");
+
+		});
+		//# sourceURL=pen.js
+	</script>
+
+	<script id="rendered-js">
+		$(".option-3").click(function () {
+			$(".option-3").removeClass("active");
+			$(this).addClass("active");
+
+		});
+		//# sourceURL=pen.js
+	</script>
+
+
+	<script id="rendered-js">
+		// Hover-carousel-1 component
+		// By Yair Even-Or
+		// written in jQuery 2013 -> refactored to vanilla 2020
+		// https://github.com/yairEO/hover-carousel-1
+
+		function HoverCarousel(elm, settings) {
+			this.DOM = {
+				scope: elm,
+				wrap: elm.querySelector('ul').parentNode
+			};
+
+
+			this.containerWidth = 0;
+			this.scrollWidth = 0;
+			this.posFromLeft = 0; // Stripe position from the left of the screen
+			this.stripePos = 0; // When relative mouse position inside the thumbs stripe
+			this.animated = null;
+			this.callbacks = {};
+
+			this.init();
+		}
+
+		HoverCarousel.prototype = {
+			init() {
+				this.bind();
+			},
+
+			destroy() {
+				this.DOM.scope.removeEventListener('mouseenter', this.callbacks.onMouseEnter);
+				this.DOM.scope.removeEventListener('mousemove', this.callbacks.onMouseMove);
+			},
+
+			bind() {
+				this.callbacks.onMouseEnter = this.onMouseEnter.bind(this);
+				this.callbacks.onMouseMove = e => {
+					if (this.mouseMoveRAF)
+						cancelAnimationFrame(this.mouseMoveRAF);
+
+					this.mouseMoveRAF = requestAnimationFrame(this.onMouseMove.bind(this, e));
+				};
+
+				this.DOM.scope.addEventListener('mouseenter', this.callbacks.onMouseEnter);
+				this.DOM.scope.addEventListener('mousemove', this.callbacks.onMouseMove);
+			},
+
+			// calculate the thumbs container width
+			onMouseEnter(e) {
+				this.nextMore = this.prevMore = false; // reset
+
+				this.containerWidth = this.DOM.wrap.clientWidth;
+				this.scrollWidth = this.DOM.wrap.scrollWidth;
+				// padding in percentage of the area which the mouse movement affects
+				this.padding = 0.2 * this.containerWidth;
+				this.posFromLeft = this.DOM.wrap.getBoundingClientRect().left;
+				var stripePos = e.pageX - this.padding - this.posFromLeft;
+				this.pos = stripePos / (this.containerWidth - this.padding * 2);
+				this.scrollPos = (this.scrollWidth - this.containerWidth) * this.pos;
+
+				// temporary add smoothness to the scroll 
+				this.DOM.wrap.style.scrollBehavior = 'smooth';
+
+				if (this.scrollPos < 0)
+					this.scrollPos = 0;
+
+				if (this.scrollPos > this.scrollWidth - this.containerWidth)
+					this.scrollPos = this.scrollWidth - this.containerWidth;
+
+				this.DOM.wrap.scrollLeft = this.scrollPos;
+				this.DOM.scope.style.setProperty('--scrollWidth', this.containerWidth / this.scrollWidth * 100 + '%');
+				this.DOM.scope.style.setProperty('--scrollLleft', this.scrollPos / this.scrollWidth * 100 + '%');
+
+				// lock UI until mouse-enter scroll is finihsed, after aprox 200ms
+				clearTimeout(this.animated);
+				this.animated = setTimeout(() => {
+					this.animated = null;
+					this.DOM.wrap.style.scrollBehavior = 'auto';
+				}, 200);
+
+				return this;
+			},
+
+			// move the stripe left or right according to mouse position
+			onMouseMove(e) {
+				// don't move anything until inital movement on 'mouseenter' has finished
+				if (this.animated) return;
+
+				this.ratio = this.scrollWidth / this.containerWidth;
+
+				// the mouse X position, "normalized" to the carousel-1 position
+				var stripePos = e.pageX - this.padding - this.posFromLeft;
+
+				if (stripePos < 0)
+					stripePos = 0;
+
+				// calculated position between 0 to 1
+				this.pos = stripePos / (this.containerWidth - this.padding * 2);
+
+				// calculate the percentage of the mouse position within the carousel-1
+				this.scrollPos = (this.scrollWidth - this.containerWidth) * this.pos;
+
+				this.DOM.wrap.scrollLeft = this.scrollPos;
+
+				// update scrollbar
+				if (this.scrollPos < this.scrollWidth - this.containerWidth)
+					this.DOM.scope.style.setProperty('--scrollLleft', this.scrollPos / this.scrollWidth * 100 + '%');
+
+				// check if element has reached an edge
+				this.prevMore = this.DOM.wrap.scrollLeft > 0;
+				this.nextMore = this.scrollWidth - this.containerWidth - this.DOM.wrap.scrollLeft > 5;
+
+				this.DOM.scope.setAttribute('data-at',
+					(this.prevMore ? 'left ' : ' ') + (
+						this.nextMore ? 'right' : ''));
+
+			}
+		};
+
+
+		var carouselElm = document.querySelector('.carousel-1');
+		new HoverCarousel(carouselElm);
+		//# sourceURL=pen.js
+	</script>
+
+	<!-- Footer: MUST mention license AND have a link to team wiki's repository on gitlab.igem.org -->
+	{% include 'footer.html' %}
+
+	<script src="https://static.igem.wiki/teams/5210/bootstrap-bundle-min.js"></script>
+</body>
+
+</html>
